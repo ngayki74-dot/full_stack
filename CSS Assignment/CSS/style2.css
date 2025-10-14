@@ -1,0 +1,79 @@
+
+.heading1{
+    text-align: center;color: blue;
+}
+.heading2{
+    text-align: center;color: rgb(155, 51, 51);
+}
+.main{
+    width: 80%;
+    height: 300px;
+    
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+.main>div{
+    width: 22%;
+    height: 99%;
+    background-color: aqua;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+}
+.main>div>img{
+    width: 100%;
+    height: 70%;
+    border-radius: 20px 20px 20px 20px;
+    
+}
+.middle{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(218, 237, 12);
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 30px;
+}
+.middle>div{
+    width: 16%;
+    height: 96%;
+    
+    margin: auto;
+    
+}
+.heading3{
+    text-align: center;color: blue;
+}
+.heading4{
+    text-align: center;color: rgb(4, 236, 50);
+}
+
+.abc{
+    width: 100%;
+    height: 200px;
+    
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+.abc>div{
+    width: 15%;
+    height: 99%;
+    background-color: aqua;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    
+}
+.abc>div>img{
+    width: 100%;
+    height: 50%;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 5px;
+}
+
+
+
+

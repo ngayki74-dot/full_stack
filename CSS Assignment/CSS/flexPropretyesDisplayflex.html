@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+    #box{
+        border: 5px solid;color: red;
+        height: 500px;
+        display: flex;
+          align-items: center;
+        justify-content: center; 
+    }
+     #box div{
+        height: 200px;
+        width: 250px;
+        border: 3px solid;color: blue;
+        font-weight: bolder;
+        
+        justify-content: center;text-align: center;
+        margin: auto;
+         }
+         #box div:nth-child(1){
+            background-color: aqua;
+         }
+         #box div:nth-child(2){
+            background-color: rgb(0, 255, 76);
+         }
+         #box div:nth-child(3){
+            background-color: rgb(255, 242, 0);
+         }
+         #box div:nth-child(4){
+            background-color: rgb(73, 26, 131);
+         }
+
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <div>box 1</div>
+    <div>box 2</div>
+    <div>box 3</div>
+    <div>box 4</div>
+</div>    
+</body>
+</html>

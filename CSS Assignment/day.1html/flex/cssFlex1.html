@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssFlex1</title>
+    <style>
+      #main {
+        width: 100%;
+        height: 600px;
+        border: 3px solid chartreuse;
+      }
+      #a {
+        width: 85%;
+        height: 70px;
+        /* border: 2px solid chocolate; */
+        margin: auto;
+        display: flex;
+      }
+      #a div {
+        width: 85%;
+        height: 50px;
+        /* border: 2px solid cornflowerblue; */
+        margin: auto;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+      }
+      #b div {
+        /* border: 2px solid crimson; */
+        width: 100px;
+      }
+      .a {
+        color: white;
+        background-color: rgb(218, 103, 9);
+      }
+      .b {
+        background-color: aqua;
+        color: rgb(1, 2, 13);
+      }
+      .c {
+        background-color: aqua;
+        color: blue;
+      }
+      #red {
+        border: 3px solid chartreuse;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #red>div {
+        height: 400px;
+        border: 2px solid cornflowerblue;
+        margin: auto;
+      }
+      .ra {
+        width: 50%;
+        height: 190px;
+        border-radius: 20px;
+        margin-left: 20px;
+      }
+      .old {
+        margin-left: 10px;
+        color: blue;
+      }
+      .one {
+        margin-left: 15px;
+        color: black;
+      }
+   
+      #in{
+        height: 200px;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #in div{
+        border: 3px solid crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="a">
+        <div class="a"><h1>Studylab</h1></div>
+        <div id="b">
+          <div class="c"><h4>home</h4></div>
+          <div class="b"><h4>About</h4></div>
+          <div class="b"><h4>course</h4></div>
+          <div class="b"><h4>Instructar</h4></div>
+          <div class="b"><h4>Blog</h4></div>
+          <div class="b"><h4>Contact</h4></div>
+        </div>
+      </div>
+      <div id="red">
+        <div id="abcx">
+          <h3 class="one">Welcome To Studylab</h3>
+          <h1 class="old">We Are Studylab In Online</h1>
+          <p class="one">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            iste laudantium, aspernatur recusandae quo quae eligendi illo,
+            cumque accusamus tempore molestias quia non commodi, eum voluptate
+            eius culpa vel nulla?
+          </p>
+          <img
+            class="ra"
+            src="https://static.vecteezy.com/system/resources/thumbnails/030/867/825/small/sunflowers-in-a-vase-on-a-table-with-a-sunset-in-the-background-ai-generated-photo.jpg"
+            alt=""
+          />
+        </div>
+        <div id="in">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

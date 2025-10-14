@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caculeter</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #main{
+            width: 350px;
+            height: 400px;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+        #display{
+            
+            width: 90%;
+            height: 60px;
+             border-radius: 20px; 
+            
+            margin: auto;
+             margin-top: 20px;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+        }
+        #keyboard{
+            width: 90%;
+            height: 300px;
+            /* border: 3px solid cornflowerblue; */
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            gap: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            
+            
+        }
+        #keyboard div{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+                  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+        }
+        .black{
+            color: aliceblue;
+            background-color: black;
+            
+        }
+        .red{
+            color: aliceblue;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>caculeter</h1>
+    <div id="main">
+        <div id="display"></div>
+        <div id="keyboard">
+            <Div>1</Div>
+            <Div>2</Div>
+            <Div>3</Div>
+            <Div class="black">+</Div>
+            <Div>4</Div>
+            <Div>5</Div>
+            <Div>6</Div>
+            <Div class="black">-</Div>
+            <Div>7</Div>
+            <Div>8</Div>
+            <Div>9</Div>
+            <Div class="black">*</Div>
+            <Div class="red">c</Div>
+            <Div>0</Div>
+            <Div class="black">=</Div>
+            <Div class="black">/</Div>
+        </div>
+    </div>
+</body>
+</html>
