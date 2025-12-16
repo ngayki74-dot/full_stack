@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My frist page</title>
+    <style>
+        body{background-color: rgb(206, 197, 177);}
+        #box1{width: 100%;   
+              background-color: rgb(97, 87, 61); border-radius: 20px;display: grid;grid-template-columns: repeat(3,1fr);}
+        #box1 div{ padding: px;margin-left: 0px;}
+        input{ width: 90%; padding: 10px; border-radius: 10px; border: 1px solid gray;}
+        button{ width: 95%; padding: 10px; background-color: blue;border-radius: 10px;border: 0;}
+        button:hover{ background-color: darkblue; color: white;}
+        @media all and (min-width:320px) and (max-width:479px) {
+         #box1{display: grid;grid-template-columns: repeat(1,1fr);background-color: brown;}}
+         @media all and (min-width:480px) and (max-width:789px) {
+         #box1{display: grid;grid-template-columns: repeat(2,1fr);background-color: rgb(0, 0, 0);}}
+            @media all and (min-width:790px) and (max-width:1020px) {
+            #box1{display: grid;grid-template-columns: repeat(3,1fr);background-color: chartreuse;}
+            }
+        </style>
+</head>
+<body>
+            <h1 style="text-align: center;color: blue; text-shadow: 1px 1px 2px pink;font-size: 80px;">welcome to Skillonit Learning Hub</h1>
+        <div id="box1">
+            <div>
+                
+                
+                 <img src="https://www.skillonit.com/m-banner-1.png" alt="">
+            </div>
+            <div>
+                 <button style="margin: 10px;"><a href=""></a>Home</button>
+                     <button style="margin: 10px;">📞 Call Us: 7083384100</button>
+                <h1 style="text-align: center;color: rgb(255, 255, 255);margin: auto;">
+                    Learn. Grow. Succeed.
+                </h1>
+                <p style="text-align: center;color: rgb(255, 255, 255);margin: auto;">
+                    Join SkillOnIt Learning Hub in Buldhana and unlock your potential with expert-led courses in web development,
+                     design, and digital marketing. Transform your career today!</p>
+                    
+                     <h4>
+                        <a href="C:\Users\HP\Desktop\css.html\Nitin1.html\login2page.html" style="text-align: center;color: yellow;
+                         text-decoration: none; font-weight: bold; margin-left: 100px;">
+                            Explore Courses</a>
+                     </h4>
+            </div>
+            <div>
+                  <H2 style="text-align: center;color: rgb(0, 4, 255);">We Are Mission Driven</H2>
+                <form >
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+
+  <br><br>
+
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd">
+
+  <br><br>
+
+  <button type="submit">Login</button>
+</form>
+</div>
+        </div>
+        
+</body>
+</html>

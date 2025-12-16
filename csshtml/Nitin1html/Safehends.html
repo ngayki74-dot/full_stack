@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media 1</title>
+    <style>
+        #box1{background-color: rgb(255, 196, 0);display: flex;justify-content: space-around;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;}
+        #box1>div{ margin-left: 50px; }
+        #box1>img{height: 200px;}
+        #box1>div>button{background-color: blue;color: black;padding: 10px 20px;margin-left: 20px;border-radius: 30px;border: 0;}
+       /* 111 box1 section */
+       /* Mobile screen */
+        @media all and (min-width:320px) and (max-width:480px){
+            #box1{flex-direction: column;}
+            #box1>div{ margin-left: 50px; }
+
+        }
+        /* mediam screen */
+        @media all and (min-width:481px) and (max-width:769px){
+            #box1{flex-direction: column;align-items: center;margin: auto;}
+            #box1>div{ margin-left: 50px; }
+            #box1>img{width: 100%;}
+
+        }
+        /* large screen */
+        @media all and (min-width:770px) and (max-width:1020px){
+            #box1{align-items: center;margin: auto;}
+            #box1>div{ margin-left: 50px; }
+            #box1>img{width: 50%;}
+
+        }
+        /* 222 box2 sectino */
+     #box2{margin-top: 30px;display: grid;grid-template-columns: repeat(6,1fr);gap: 20px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+       #box2>div{width: 200px;text-align: center;padding: 10px 0;background-color: aqua;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+         #box2>div>img{width: 70%;}
+             /*mobile screen */
+         @media all and (min-width:320px) and (max-width:480px){
+            #box2{grid-template-columns: repeat(2,1fr);gap: 10px;}
+            #box2>div{width: 100%;}
+            
+         }
+         /* mediam screen */
+         @media all and (min-width:481px) and (max-width:769px){
+            #box2{grid-template-columns: repeat(3,1fr);gap: 10px;}
+            #box2>div{width: 100%;}
+            
+         }
+         /* large Screen */
+         @media all and (min-width:770px) and (max-width:1020px){
+            #box2{grid-template-columns: repeat(6,1fr);gap: 10px;}
+            #box2>div{width: 100%;margin: auto;}
+            #box2>div>h2{font-size: 15px;}
+            
+         }
+         /*333 box3 section */
+         #box3{ margin-top: 30px;display: grid;grid-template-columns: repeat(4,1fr);gap: 10px;}
+         #box3>div{width: 320px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+         #box3>div>img{width: 100%;}
+         #box3>div>h1{text-align: center;}
+         #box3>div>p{text-align: center;}
+         /*mobile screen*/
+         @media all and (min-width:320px) and (max-width:480px){
+            #box3{grid-template-columns: repeat(1,1fr);gap: 10px;}
+            #box3>div{width: 100%;}
+         }
+         /*mediam screen*/
+         @media all and (min-width:481px) and (max-width:769px){
+            #box3{grid-template-columns: repeat(2,1fr);gap: 10px;}
+            #box3>div{width: 100%;}
+         }
+            /*large screen*/
+         @media all and (min-width:770px) and (max-width:1020px){
+            #box3{grid-template-columns: repeat(4,1fr);gap: 10px;}
+            #box3>div{width: 100%;}
+         }
+         
+         
+    </style>
+</head>
+<body>
+    <!-- box1 section -->
+    <div id="box1">
+     <div>
+    <h1>You are in safe hands</h1>
+    <p>Lorem ipsum dolor, sit amet </p>
+    <button>Know more</button>
+    </div>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-DjtIcOre9R9ZKsgYGDFOxLin1vhGe3EyIw&s" alt=""> 
+    </div>
+     <!-- box2 section -->
+     <div id="box2">
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+        <div>
+            <img src="https://images.stockcake.com/public/1/9/2/192f1f24-a1a2-474e-a104-03aa9be210f3_large/doctor-consulting-patient-stockcake.jpg" alt="">
+            <h2>Instan Video Consaltation</h2>
+            <p>connect within 60 secs</p>
+        </div>
+     </div>
+     <!-- box3 section -->
+      <h1 style="text-align: center;">Book an appointment for an clinice consletation</h1>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+      <div id="box3">
+        <div>
+             <img src="https://www.orthodonticprecision.com/wp-content/uploads/5-tip-helping-child-through-teething.jpg" alt="">
+             <h1>Theeting truble</h1>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div>
+             <img src="https://www.orthodonticprecision.com/wp-content/uploads/5-tip-helping-child-through-teething.jpg" alt="">
+             <h1>Theeting truble</h1>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div>
+             <img src="https://www.orthodonticprecision.com/wp-content/uploads/5-tip-helping-child-through-teething.jpg" alt="">
+             <h1>Theeting truble</h1>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div>
+             <img src="https://www.orthodonticprecision.com/wp-content/uploads/5-tip-helping-child-through-teething.jpg" alt="">
+             <h1>Theeting truble</h1>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+      </div>
+</body>
+</html>
+
+
+

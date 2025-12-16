@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilingual Login Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #975f5f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #0077ff;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #005fcc;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    
+    <h2>Login / लॉग इन</h2>
+
+    <form>
+        <label for="username">Username / वापरकर्तानाव</label>
+        <input type="text" id="username" placeholder="Enter Username / वापरकर्तानाव लिहा">
+
+        <label for="password">Password / पासवर्ड</label>
+        <input type="password" id="password" placeholder="Enter Password / पासवर्ड लिहा">
+
+        <button type="submit">Login / लॉग इन</button>
+    </form>
+</div>
+
+</body>
+</html>
