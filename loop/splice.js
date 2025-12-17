@@ -33,6 +33,9 @@ console.log(fruits);           //output=["apple", "orange"]
 
 
 
+let numbers1 = [10, 20, 30, 40,50,60,70,80,90,100];
+numbers1.splice(4,3)
+console.log(numbers1)                             //output=10,20,30,40,80,90,100
 
 
 
