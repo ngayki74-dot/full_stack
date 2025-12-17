@@ -1,4 +1,4 @@
-//splice slice
+//splice method
 //
 //// splice() method array मधील element delete किंवा add करण्यासाठी वापरला जातो
 
@@ -38,6 +38,29 @@ numbers1.splice(4,3)
 console.log(numbers1)                             //output=10,20,30,40,80,90,100
 
 
+//slice method
+//.slice(start, end)
+//method is use for getting a part of array
+//1st parameter starting index 
+//2nd parameter ending index
+let arr = [1, 2, 3, 4, 5];
+let part = arr.slice(1, 4);     ////1 → सुरुवात index → arr[1] = 1;4 → शेवट index (exclusive) → arr[4] = 5(हे समाविष्ट नाही)   
+console.log(part)                      //output=[2,3,4]
+
+let arr2 = [10, 20, 30, 40, 50];
+let part2 = arr.slice(1, 4);        //1 → सुरुवात index → arr[1] = 20;4 → शेवट index (exclusive) → arr[4] = 50 (हे समाविष्ट नाही)
+console.log(part2);                         // [20, 30, 40]
+
+
+
+//sort methid
+
+
+let arr3 = [5, 2, 8, 1, 4];
+
+// बरोबर sort function
+arr3.sort((a, b)=>a-b);
+console.log(arr3);                            //output= [1, 2, 4, 5, 8]
 
 
 
