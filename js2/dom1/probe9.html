@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probe9</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" placeholder="enter your username" id="username">
+        <input type="password" placeholder="enter your password" id="password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <h2 id="result"></h2>
+
+    <script>
+        // correct username & password (fixed)
+        let correctUsername = "rahul@123";
+        let correctPassword = "123456";
+
+        let inputUsername = document.getElementById("username");
+        let inputPassword = document.getElementById("password");
+        let result = document.getElementById("result");
+
+        function login() {
+            if (
+                inputUsername.value === correctUsername &&
+                inputPassword.value === correctPassword
+            ) {
+                result.innerText = "Login Successful ✅";
+                result.style.color = "green";
+            } else {
+                result.innerText = " Password ❌";
+                result.style.color = "red";
+            } 
+
+            }
+        
+    </script>
+
+</body>
+</html>
+inputPassword.value === correctPassword

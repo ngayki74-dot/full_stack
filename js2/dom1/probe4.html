@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle Example</title>
+</head>
+<body>
+
+    <h1 id="heading">hello</h1>
+    <button onclick="toggleText()">Change</button>
+
+    <script>
+        let heading = document.getElementById("heading");
+
+        function toggleText() {
+            if (heading.innerText === "Hello") {
+                heading.innerText = "Bye";
+                  heading.style.color = "red";
+            } else {
+                heading.innerText = "Hello";
+            }
+        }
+
+        //if-else वापर      //Text compare करणे            //Button click वर text toggle
+    </script>
+
+</body>
+</html>

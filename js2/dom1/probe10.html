@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Check</title>
+</head>
+<body>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="login()">Login</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        let correctUsername = "rahul@123";
+        let correctPassword = "123456";
+
+        let inputUsername = document.getElementById("username");
+        let inputPassword = document.getElementById("password");
+        let result = document.getElementById("result");
+
+        function login() {
+
+            if (
+                inputUsername.value === correctUsername &&
+                inputPassword.value === correctPassword
+            ) {
+                result.innerText = "Login Successful ✅";
+                result.style.color = "green";
+            }
+            else if (inputUsername.value !== correctUsername) {
+                result.innerText = "Username wrong ❌";
+                result.style.color = "red";
+            }
+            else if (inputPassword.value !== correctPassword) {
+                result.innerText = "Password wrong ❌";
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

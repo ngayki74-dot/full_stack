@@ -1,0 +1,24 @@
+//Input box वापरून Heading change करणे
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Example</title>
+</head>
+<body>
+
+    <h1 id="heading">Skillonit</h1>
+
+    <input type="text" id="myInput" placeholder="username">
+    <button onclick="changeHeading()">Submit</button>
+
+    <script>
+        function changeHeading() {
+            let inputValue = document.getElementById("myInput").value;
+            document.getElementById("heading").innerText = inputValue;
+        }
+        //input.value कसे घ्यायचे                 //User input वापरून text बदलणे
+    </script>
+
+</body>
+</html>

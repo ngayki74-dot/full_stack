@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probe3</title>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>           
+    <button onclick="bye()">change</button>
+
+    <script>
+        let heading = document.getElementById("heading");
+        console.log(heading);
+
+        function bye() {
+            heading.innerText = "Bye";
+            heading.style.color = "red";
+}
+//getElementById("heading") → <h1> element मिळतो
+
+//console.log(heading) → पूर्ण element console मध्ये दिसतो
+
+//Button क्लिक केल्यावर bye() function call होतो
+
+//heading.innerText = "Bye" → text बदलतो
+//heading.style.color = "red" → color बदलतो
+    </script>
+</body>
+</html>

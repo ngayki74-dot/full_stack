@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frintend 1</title>
+</head>
+<body>
+    <h1 id="getname"></h1>
+    <h1 id="getpassword"></h1>
+
+    <div>
+    <input type="text" placeholder="Enter your name" id="name" value="rahul">
+    <input type="text" placeholder="Enter your password" id="password" value="234567">
+    <button id="submit" onclick="getdata()">submit</button>
+    </div>
+</body>
+<script>
+    let name =document.getElementById("name")
+    let password=document.getElementById("password")
+    function getdata(){
+        //console.log(name.valum)
+       // console.log(password.valum)
+       getname.innertext=name.value
+       getpassword.innertext=password.value
+    }
+</script>
+</html>
