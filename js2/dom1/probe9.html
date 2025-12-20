@@ -6,40 +6,34 @@
     <title>probe9</title>
 </head>
 <body>
-
-    <div>
-        <input type="text" placeholder="enter your username" id="username">
-        <input type="password" placeholder="enter your password" id="password">
-        <button onclick="login()">Login</button>
-    </div>
+    <input type="text" placeholder="enter your username" id="username">
+    <input type="text" placeholder="enter your pasword" id="password">
+    <button onclick="Login()">Login</button>
 
     <h2 id="result"></h2>
-
-    <script>
-        // correct username & password (fixed)
-        let correctUsername = "rahul@123";
-        let correctPassword = "123456";
-
-        let inputUsername = document.getElementById("username");
-        let inputPassword = document.getElementById("password");
-        let result = document.getElementById("result");
-
-        function login() {
-            if (
-                inputUsername.value === correctUsername &&
-                inputPassword.value === correctPassword
-            ) {
-                result.innerText = "Login Successful ✅";
-                result.style.color = "green";
-            } else {
-                result.innerText = " Password ❌";
-                result.style.color = "red";
-            } 
-
-            }
-        
-    </script>
-
 </body>
+<script>
+    let username="skillonit@123"
+    let password="123456"
+
+    let inputUsername=document.getElementById("username")
+    let inputPassword=document.getElementById("password")
+    let result=document.getElementById("result")
+
+    function Login(){
+        if(inputUsername.value === username && inputPassword.value === password){
+            result.innerText="Logon Successful";
+            result.style.color="green";
+        }
+        else if(inputUsername.value !== username){
+            result.innerText = "wrong username"
+            result.style.color = "red"
+        }
+        else if(inputPassword.value !== password){
+            result.innerText = "wrong password"
+            result.style.color = "red"
+        }
+    }
+
+</script>
 </html>
-inputPassword.value === correctPassword
