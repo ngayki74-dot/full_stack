@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+
+<h1 id="show"></h1>
+
+<form id="loginForm" style="border:2px solid red; padding:20px; width:300px; margin:auto;">
+    <input type="text" id="name" name="name" placeholder="Enter your Name">
+    <br><br>
+    <input type="password" id="pass" name="pass" placeholder="Enter your Password">
+    <br><br>
+    <input type="submit" value="Login">
+</form>
+
+<script>
+    let form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function () {
+        event.preventDefault();
+
+        let name = form.name.value;
+        let pass = form.pass.value;
+
+        console.log(name);
+        console.log(pass);
+
+        document.getElementById("show").innerText = "Welcome " + name;
+    });
+</script>
+
+</body>
+</html>

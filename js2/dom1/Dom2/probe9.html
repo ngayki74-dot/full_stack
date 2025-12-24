@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event 2</title>
+</head>
+<body>
+     <h1 id="head"></h1> <!-- 👉 हा <h1> tag आहे. यामध्ये click केल्यावर कोणत्या element ने click केले ते text दिसेल-->
+     <button>click</button>  <!--👉 हा button आहे. यावर click केल्यावर event trigger होईल -->
+     <p>i am para</p>  <!-- 👉 हा paragraph आहे. यावर click केल्यावर पण event trigger होईल --> 
+</body>
+
+<script>
+    let btn = document.querySelector("button");   //HTML मधील button element घेण्यासाठी. btn या variable मध्ये store केले
+    let head = document.getElementById("head");   //id="head" असलेला <h1> element घेतला
+    let para = document.querySelector("p");         //HTML मधील paragraph (<p>) element घेतला
+
+    btn.addEventListener("click", abc);      //button वर click event लावला.click झाला की abc() function call होईल
+    para.addEventListener("click", efg);   //paragraph वर click event .click झाला की efg() function call होईल
+
+    function abc(event) {
+        let x = event.target;  //event.target म्हणजे नेमकं कोणत्या element वर click झाला.  button click केल्यावर x = <button>
+        head.innerText = "Clicked by " + x.tagName;    //<h1> मध्ये text टाकतो x.tagName → BUTTON
+        
+    }
+
+    function efg(event) {              
+        let x = event.target;         //paragraph click केल्यावर x.tagName → P <h1> मध्ये Clicked by P दिसेल
+        head.innerText = "Clicked by " + x.tagName;       //Paragraph क्लिक केला → Clicked by P
+    }
+</script>
+</html>

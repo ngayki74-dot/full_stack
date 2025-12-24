@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner html</title>
+</head>
+<body>
+    <div id="main"></div>
+    <button>get Element</button>
+</body>
+<script>
+    let btn = document.querySelector("button")
+    let div = document.getElementById("main")
+
+    btn.addEventListener("click",function(){
+        let x= document.createElement("h1")
+        x.innerText="Hello I am h1 tag"
+        div.append(x)
+    })
+</script>
+</html>
+
+<!-- खाली तुमच्या **code चे step-by-step explanation (मराठीत)** दिले आहे 👇
+
+---
+
+## 🧩 HTML भागाचे explanation
+
+```html
+<div id="main"></div>
+```
+
+👉 हा एक `div` आहे
+👉 `id="main"` असल्यामुळे JavaScript मधून आपण तो easily select करू शकतो
+👉 नवीन element (h1) **याच div मध्ये add होईल**
+
+---
+
+```html
+<button>get Element</button>
+```
+
+👉 हा button आहे
+👉 यावर click केल्यावर JavaScript code run होईल
+
+---
+
+## 🧩 JavaScript भागाचे explanation
+
+---
+
+### 1️⃣ Button select करणे
+
+```js
+let btn = document.querySelector("button")
+```
+
+👉 HTML मधील `<button>` element select केला
+👉 `btn` या variable मध्ये store केला
+
+---
+
+### 2️⃣ Div select करणे
+
+```js
+let div = document.getElementById("main")
+```
+
+👉 `id="main"` असलेला div घेतला
+👉 नवीन element इथे add करणार आहोत
+
+---
+
+### 3️⃣ Button वर click event लावणे
+
+```js
+btn.addEventListener("click", function(){
+```
+
+👉 button वर **click event** लावला
+👉 button click झाला की आतला function run होईल
+
+---
+
+### 4️⃣ नवीन `<h1>` element तयार करणे
+
+```js
+let x = document.createElement("h1")
+```
+
+👉 JavaScript वापरून **नवीन h1 tag तयार केला**
+👉 हा अजून HTML मध्ये दिसत नाही
+
+---
+
+### 5️⃣ h1 ला text देणे
+
+```js
+x.innerText = "Hello I am h1 tag"
+```
+
+👉 h1 च्या आत text टाकला
+
+---
+
+### 6️⃣ h1 ला div मध्ये add करणे
+
+```js
+div.append(x)
+```
+
+👉 तयार केलेला h1
+👉 `div id="main"` च्या आत add केला
+
+---
+
+### 7️⃣ Event function बंद
+
+```js
+})
+```
+
+---
+
+## 🎯 Output काय होईल?
+
+* सुरुवातीला page वर:
+
+  * एक button
+  * एक empty div
+
+* **Button वर click केल्यावर:**
+
+  * `Hello I am h1 tag` असा `<h1>` तयार होईल
+  * तो `div` मध्ये दिसेल
+
+* **Button multiple वेळा click केल्यास**
+
+  * प्रत्येक click ला नवीन `<h1>` add होईल
+
+---
+
+## 💡 Extra Tip
+
+जर तुम्हाला **एकच h1 हवं असेल (repeat नको)** तर:
+
+```js
+div.innerHTML = "<h1>Hello I am h1 tag</h1>";
+```
+
+---
+
+जर तुम्हाला:
+
+
+ -->

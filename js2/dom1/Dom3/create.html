@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Element</title>
+</head>
+<body>
+    <div id="main"></div>
+
+</body>
+<script>
+    let main =document.getElementById("main")     //HTML मधला <div id="main"></div> मिळतो
+    let h1 =document.createElement("h1")    //नवीन <h1>hello</h1> तयार होतो
+    h1.innerText="hello"
+   // main.append(h1)              //main div मध्ये h1 add होतात
+
+    let para =document.createElement("p")     //नवीन <p>how are you amol</p> तयार होतो
+    para.innerText="how are you amol"            
+   // main.append(para)            // main div मध्ये  p add होतात
+   main.append(h1,para)                //main div मध्ये h1 आणि p add होतात
+</script>
+</html>

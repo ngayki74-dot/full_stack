@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme</title>
+</head>
+<body>
+    <h1 id="show"></h1>
+    <form style="border:2px solid red;margin-top: 200px;padding: 20px;margin: auto; width: 300px;">
+        <h1>Login in</h1>
+        <input type="text" placeholder="Enter your Name" id="name">
+        <br>
+        <input type="password" placeholder="Enter Your password" id="pass">
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+<script>
+    let form =document.querySelector("form")
+   // let name =document.getElementById("name").value
+    //let pass =document.getElementById("pass").value
+
+    form.addEventListener("submit",function(){
+        event.preventDefault();
+       // conlsole.log(name.value)
+       // conlsole.log(pass.value)
+        console.log(form.name.value)
+        console.log(form.pass.value)
+        document.getElementById("show").innerText= "skillonit";
+    })
+</script>
+</html>
