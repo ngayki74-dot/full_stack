@@ -6,6 +6,20 @@
     <title>Id</title>
 </head>
 <body>
-    
+    <div class="abc">
+        <h1 class="heading">i am heading 1</h1>
+        <h2 class="heading ">I am heading 2</h2>
+
+    </div>
+    <h4 id="head">I am heading 4</h4>
+    <p class="para">I am para</p>
+    <h3 class="heading">I am heading 3</h3>
+    <h5 id="head">I am heading 5</h5>
 </body>
+<script>
+    let head =document.getElementById("head");  //इथे id="head" दिलेला आहे.
+    // id नेहमी unique (एकदाच वापरायचा) अस म्हणजे head नावाचा id फक्त ह्याच <h4> ला आहे.
+    console.log(head.innerText)//document.getElementById("head")हा कोड head id असलेला element शोधतो.
+//head.innerText्   या element मधील text काढतो.console.log(...)तो text browser च्या console मध्ये print करतो.
+</script>
 </html>

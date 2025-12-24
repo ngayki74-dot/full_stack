@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag </title>
+</head>
+<body>
+    <h1>The Document Object</h1>
+    <h1>The getElementByTag()Method</h1>
+    <ul>
+        <li>Coffce</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <p>I am para 1</p>
+    <p>I am para 2</p>
+    <div>I am box</div>
+</body>
+<script>
+    let h1 =document.getElementsByTagName("h1")
+    console.log(h1)
+</script>
+</html>
+
+<!-- काय होते?
+
+document.getElementsByTagName("h1")
+
+h1 tag असलेले सगळे elements शोधतो
+
+result → HTMLCollection (list सारखे)
+
+console.log(h1)
+
+browser च्या console मध्ये सगळे h1 elements print करतो
+
+Output (console मध्ये)
+HTMLCollection(2) [h1, h1]
+0: <h1>The Document Object</h1>
+1: <h1>The getElementByTag()Method</h1>
+
+🔹 जर h1 चा text print करायचा असेल
+console.log(h1[0].innerText); // The Document Object
+console.log(h1[1].innerText); // The getElementByTag()Method
+
+🔹 Loop वापरून सर्व h1 print करायला
+for (let i = 0; i < h1.length; i++) {
+    console.log(h1[i].innerText);
+}
+
+
+Output:
+
+The Document Object
+The getElementByTag()Method
+
+🔹 महत्वाचे लक्षात ठेवा
+Method	काय देते	Notes
+getElementsByTagName("tag")	tag ने element शोधतो	HTMLCollection, index 0 पासून सुरू
+getElementsByClassName("class")	class ने element शोधतो	HTMLCollection
+getElementById("id")	id ने element शोधतो	unique element -->

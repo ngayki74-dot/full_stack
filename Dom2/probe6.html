@@ -1,0 +1,41 @@
+<!-- Query Selector
+document.querySelector("#firstPara") // id
+document.querySelector(".secondPara") // class
+document.querySelectorAll("p")[2] // tag
+
+  querySelector → पहिला element select करतो 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Example</title>
+</head>
+<body>
+    <p id="firstPara">This is the First Paragraph</p>
+    <p class="secondPara">This is the Second Paragraph</p>
+    <p>This is the Third Paragraph</p>
+</body>
+<script>
+    // 1 पहिला paragraph (id वापरून)
+    let first = document.querySelector("#firstPara");
+    first.style.color = "white";            // text color
+    first.style.backgroundColor = "blue";   // background color
+    first.innerText = "First Paragraph Updated!"; // text बदलणे
+
+    // 2 दुसरा paragraph (class वापरून)
+    let second = document.querySelector(".secondPara");
+    second.style.color = "yellow";
+    second.style.backgroundColor = "green";
+    second.innerText = "Second Paragraph Updated!";
+
+    // 3 तिसरा paragraph (tag वापरून)
+    let third = document.querySelectorAll("p")[2];
+    third.style.color = "red";
+    third.style.backgroundColor = "black";
+    third.innerText = "Third Paragraph Updated!";
+</script>
+</html>

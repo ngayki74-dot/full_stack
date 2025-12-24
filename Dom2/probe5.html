@@ -1,0 +1,23 @@
+<!-- Query Selector 
+ querySelector → पहिला element select करतो 
+
+ जर HTML मध्ये त्या tag अस्तित्वात नसेल → null
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <p>Thish is a Frist Element</p>
+    <p>Thish is a Secont Element</p>
+    <p>Thish is a Third Element</p>
+</body>
+<script>
+    let p= document.querySelector("p")
+    console.log(p.innerText)                         
+</script>
+</html>

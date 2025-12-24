@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <div class="abc">
+        <h1 class="heading">i am heading 1</h1>
+        <h2 class="heading ">I am heading 2</h2>
+
+    </div>
+    <h4 id="head">I am heading 4</h4>
+    <p class="para">I am para</p>
+    <h3 class="heading">I am heading 3</h3>
+    <h5 id="head">I am heading 5</h5>
+</body>
+<script>
+    let heading =document.getElementsByClassName("heading") 
+    //console.log(heading)
+     
+    //document.getElementsByClassName("heading")heading class असलेले सगळे elements शोधतो.
+    // हे एक HTMLCollection परत करते (list सारखे).
+    
+   // console.log(heading[0])       //headings[0] म्हणजे?  पहिला element → h1 output I am heading 1
+
+  // console.log(heading[1])         //Index 0 पासून सुरू होतो.headings[1] →output ✅ I am heading 2
+
+console.log(heading[heading.length-1])      //headings.length → एकूण किती headings आहेत 
+                                          //length - 1 → शेवटचा index  Output:I am heading 5
+</script>
+</html>

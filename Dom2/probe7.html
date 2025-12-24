@@ -1,0 +1,46 @@
+<!-- Query Selector All 
+ document.querySelector("#firstPara") // id
+document.querySelector(".secondPara") // class
+document.querySelectorAll("p")[2] // tag
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query selector All</title>
+</head>
+<body>
+    <p id="firstPara">This is the First Paragraph</p>
+    <p class="secondPara">This is the Second Paragraph</p>
+    <p>This is the Third Paragraph</p>
+
+    <button id="changeBtn">Change Colors & Text</button>
+</body>
+<script>
+    let first = document.querySelector("#firstPara");
+    let second = document.querySelector(".secondPara");
+    let third = document.querySelectorAll("p")[2];
+    let button = document.querySelector("#changeBtn");
+
+    // click event handler
+    button.addEventListener("click", function() {
+        // first paragraph
+        first.style.color = "white";
+        first.style.backgroundColor = "blue";
+        first.innerText = "First Paragraph Updated on Click!";
+
+        // second paragraph
+        second.style.color = "yellow";
+        second.style.backgroundColor = "green";
+        second.innerText = "Second Paragraph Updated on Click!";
+
+        // third paragraph
+        third.style.color = "red";
+        third.style.backgroundColor = "black";
+        third.innerText = "Third Paragraph Updated on Click!";
+    });
+</script>
+</html>

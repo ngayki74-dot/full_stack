@@ -1,0 +1,71 @@
+<!-- id,class, tag
+  | प्रकार | वापर                           | किती वेळा |
+| ------ | --------------------------     | --------- |
+| id     | एक element ओळखायला           | एकदाच     |
+| class  | अनेक elements group करायला     | अनेकदा    |
+| tag    | element चा type                | सगळीकडे   |
+
+// id
+document.querySelector("#mainHeading");
+
+// class
+document.querySelectorAll(".heading");
+
+// tag
+document.querySelectorAll("p");
+
+लक्षात ठेवा
+
+# → id साठी
+
+. → class साठी
+
+काहीच नाही → tag साठी
+प्रकार	Method
+id	getElementById()
+class	getElementsByClassName()
+tag	getElementsByTagName()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id,Class,Tag</title>
+</head>
+<body>
+    <p class="csk" id="Dhoni">I am Dhoni from Chennai</p>
+    <p class="mi">I am Sachi from Mumbai</p>
+    <p class="rcb">I am Varat from Benglore</p>
+    <p class="mi">I am Rohit from Mumbai</p>
+    <p class="rcb" id="abd"> I am ABD from Bengalore</p>
+    <p class="csk">I am Raina from Chennai</p>
+</body>
+<script>
+   let csk=document.getElementsByClassName("csk")
+   console.log(csk)    //csk class असलेले सगळे <p> elements घेतो  csk मध्ये येते:
+    //0: <p class="csk" id="Dhoni">I am Dhoni from Chennai</p>
+    //1: <p class="csk">I am Raina from Chennai</p>
+    //पहिला csk player:    console.log(csk[0].innerText);
+    //दुसरा csk player:     console.log(csk[1].innerText);
+    //Loop वापरून सगळे CSK players print करायला
+    //for (let i = 0; i < csk.length; i++) {console.log(csk[i].innerText);}
+
+
+    //id Element
+    let Dhoni = document.getElementById("Dhoni");                  // CSS	JavaScript
+        Dhoni.style.backgroundColor="yellow"        //background → पिवळा 🟨   //background-color	backgroundColor
+        Dhoni.style.color="red"                   //text color → लाल 🔴        //font-style	fontStyle
+        Dhoni.style.fontSize ="40px"                //text size → 40px (मोठा होतो) //font-size	fontSize
+
+        let rcb =document.getElementsByClassName("rcb")
+        rcb[0].style.backgroundColor="red"  //rcb class असलेले २ paragraphs घेतो   //rcb[0]  पहिला → लाल 🔴
+        rcb[1].style.backgroundColor="blue"   //rcb[1]दुसरा RCB player → ABD      //rcb[1]   दुसरा → निळा 🔵
+
+                     //Loop वापरून दोघांनाही same color द्यायचा असेल तर
+                   for (let i = 0; i < rcb.length; i++) {
+                          rcb[i].style.backgroundColor = "red";}  //लाल 🔴
+</script>
+
+</html>
