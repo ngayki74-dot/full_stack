@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+
+<h2>Login</h2>
+<input type="email" id="email" placeholder="Enter Email"><br><br>
+<input type="password" id="password" placeholder="Enter Password"><br><br>
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const user = JSON.parse(localStorage.getItem("userData"));
+
+  if(user && user.email === email && user.password === password){
+    localStorage.setItem("isAuth", true);
+    alert("Login Successful");
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid Credentials");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Mens</title></head>
+<body>
+
+<h1>Mens Products</h1>
+<p>Only logged in users can see this page.</p>
+<script>
+  const isAuth = localStorage.getItem("isAuth");
+
+  if (!isAuth) {
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
+</script>
+
+
+</body>
+</html>
