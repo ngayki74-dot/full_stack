@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element by name and marks</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+<script>
+    let main = document.getElementById("main")
+    let arr = ["amol","harsh","vaibhav","rupali","akash","raj"]
+     let marks = [78,76,87,97,86,79,]
+    for(let i =0;i<arr.length;i++){
+        let h1 =document.createElement("h1");
+        let p =document.createElement("p");
+        h1.innerText=arr[i];
+        p.innerText=marks[i]
+        main.append(h1,p);
+    }
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element by name</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+<script>
+    let main = document.getElementById("main")
+    let arr = ["amol","harsh","vaibhav","rupali","akash","raj"]
+
+    for(let i =0;i<arr.length;i++){
+        let h1 =document.createElement("h1")
+        h1.innerText=arr[i];
+        main.append(h1)
+    }
+</script>
+</html>
+<!-- हा कोड काय करतो?
+
+array मधील प्रत्येक नाव घेतो
+
+प्रत्येक नावासाठी नवीन <h1> element तयार करतो
+
+त्या <h1> मध्ये नाव टाकतो
+
+आणि तो #main div मध्ये जोडतो
+
+innerText ऐवजी textContent का वापरायचा?
+
+textContent जास्त वेगवान आहे
+
+सर्व browsers मध्ये नीट काम करतो
+
+page layout वर unnecessary effect करत नाही
+
+तुमचा original code खूप चांगला आहे — हा फक्त modern आणि clean style आहे 👍 -->
