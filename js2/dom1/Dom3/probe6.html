@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>container 1</title>
+    <style>
+        #container{
+            background-color: aqua;
+        }
+        .main{
+            border: 2px solid;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let container =document.getElementById("container");
+
+    let student_data =[
+     {
+        Name:"Harsh",
+        Marks:96,
+        Color:"green"
+     },
+     {
+        Name:"Amol",
+        Marks:91,
+        Color:"yellow"
+     },
+     {
+        Name:"Vaibhav",
+        Marks:85,
+        Color:"red"
+     },
+     {
+        Name:"Rpali",
+        Marks:79,
+        Color:"pink"
+     },
+     {
+        Name:"Akash",
+        Marks:35,
+        Color:"blue"
+     },
+     {
+        Name:"raj",
+        Marks:96.5,
+        Color:"violet"
+     }
+    ];
+
+    for(let i = 0;i <student_data.length;i++){
+        let main=document.createElement("div")
+        main.style.backgroundColor=student_data[i].Color
+        main.setAttribute("class","main")
+        
+        let name=document.createElement("h1");
+        name.innerText= student_data[i].Name;
+
+
+        let marks= document.createElement("h5");
+        marks.innerText=student_data[i].Marks
+
+     main.append(name,marks)
+
+        container.append(main)
+
+    }
+
+
+</script>
+</html>

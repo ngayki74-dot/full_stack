@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From my 1</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+    <script>
+        let main = document.getElementById("main");
+         let arr=["Amol","Harsh","Rupali","Vaibhav","Akash","Sakent"];
+         let marks=[98,69,89,78,90,75];
+         let color=["red","green","blue","yellow","purple","violet"];
+        
+
+         for(let i = 0; i <arr.length; i++){
+         let h1 = document.createElement("h1");
+         h1.style.color=color[i];
+         h1.style.fontSize="60px"
+         let p = document.createElement("p");
+         p.style.backgroundColor=color[i]
+         h1.innerText = arr[i];
+         p.innerText = marks[i];
+         main.append(h1,p)
+         }
+        
+    </script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my 3 page</title>
+    <style>
+        #container{
+            background-color: aqua;
+        }
+        .rahul{
+            border: 2px solid;
+            width: 200px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let container =document.getElementById("container");
+
+    let student_data=[
+        {
+            name:"Diya",
+            marks:89,
+            color:"green"
+
+        },
+    
+        {
+            name:"Shreya",
+            marks:92,
+            color:"blue"
+
+        },
+        {
+            name:"Shivansh",
+            marks:98,
+            color:"violet"
+
+        },
+        {
+            name:"Prnshi",
+            marks:95,
+            color:"pink"
+
+        },
+        {
+            name:"Ganesh",
+            marks:42,
+            color:"red"
+
+        },
+        {
+            name:"Sakha",
+            marks:93,
+            color:"yellow"
+
+        },
+    ];
+
+for(let i = 0;i <student_data.length;i++){
+   let rahul=document.createElement("div");
+   rahul.setAttribute("class","rahul");
+   rahul.style.backgroundColor=student_data[i].color
+   
+
+
+    let shiv=document.createElement("h1");
+    shiv.innerText=student_data[i].name;
+
+
+    let nandan=document.createElement("h5");
+    nandan.innerText=student_data[i].marks;
+
+
+
+    rahul.append(shiv,nandan)
+    container.append(rahul)
+}
+
+
+</script>
+</html>

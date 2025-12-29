@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<body>
+    <input type="Username" id="username" placeholder="Enter your username">
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="submit()">Login</button>
+    <h1 id="result"></h1>
+</body>
+<script>
+    let Username="Skillonit@123"
+    let password="123456"
+
+    
+    let result=document.getElementById("result")
+
+    function submit(){
+        let correctUsername=document.getElementById("username").value
+        let correctPassword=document.getElementById("password").value
+        
+        if(Username===correctUsername &&
+            password===correctPassword
+        ){
+            result.innerText="login Successful";
+            result.style.color="green";
+        }else if(Username!==correctUsername){
+            result.innerText="wrong username";
+            result.style.color="red";
+        }
+        else if(password!==correctPassword){
+            result.innerText="wrong password";
+            result.style.color="red";
+        }
+    }
+</script>
+</html>
