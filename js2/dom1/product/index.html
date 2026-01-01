@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="create">
+    <form>
+         <h1 id="shiv">Add Product Inventory</h1>
+   <input type="text" id="name" placeholder="product name">
+   <select id="catagory">
+    <option value="">product catagory</option>
+    <option value="Grocery">Grocery</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Home Appliances">Home Appliances</option>
+   </select>
+   <input type="text" id="brand" placeholder="brand">
+   <input type="number" id="price" placeholder="product price">
+   <select id="deliveredBy">
+    <option value="">DeliveredBy</option>
+    <option value="plane">plane</option>
+    <option value="ship">ship</option>
+    <option value="Delivery van">Delivery van</option>
+   </select>
+   <input type="submit" value="Add Inventory">
+    </form>
+    </div>
+    <h1 id="total_price">Product Price -0</h1>
+    <table border="1">
+         
+        <thead>
+            <tr>
+                <th>product name</th>
+                
+                <th>catagory</th>
+                
+                <th>brand</th>
+                
+                <th>price</th>
+                
+                <th>deliveredBy</th>
+                
+                <th>price setment</th>
+                
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script src="index.js"></script>
+</html>

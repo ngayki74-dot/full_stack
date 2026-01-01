@@ -1,0 +1,22 @@
+#create{
+    width: 400px;
+    border-radius: 50px;
+    background-color: rgb(255, 187, 0);
+    text-align: center;margin: auto;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+#shiv{
+    color:blue;
+    margin-top: 20px;
+    font-size: 50px;
+}
+form{
+    width: 300px;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 30px;
+    background-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
