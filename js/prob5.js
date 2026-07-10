@@ -60,3 +60,119 @@ console.log(ab);                           //30                   30 valum nahi 
         return "hello";
     }
     console.log(func1);                       //function
+
+
+    // // =======================================
+// Variables in JavaScript
+// =======================================
+
+// Variable => A container used to store data.
+
+// var
+var bag = 45;           // Number
+var box = "hello";      // String
+var Active = true;      // Boolean
+
+// Print values
+console.log(bag);       // 45
+console.log(box);       // hello
+console.log(Active);    // true
+
+// ---------------------------------------
+// var Example
+// ---------------------------------------
+
+var bag2;               // Declaration
+console.log(bag2);      // undefined
+
+bag2 = 100;             // Re-assignment
+console.log(bag2);      // 100
+
+bag2 = 150;             // Re-assignment
+console.log(bag2);      // 150
+
+// Redeclaration is allowed with var
+var bag2 = 200;
+console.log(bag2);      // 200
+
+
+
+// =======================================
+// let
+// =======================================
+
+let a = 20;
+console.log(a);         // 20
+
+a = 40;                 // Re-assignment allowed
+console.log(a);         // 40
+
+//let a = 60;          // ❌ Error (Redeclaration not allowed)
+
+
+// =======================================
+// const
+// =======================================
+
+const ab = 30;
+console.log(ab);        // 30
+
+// ab = 50;             // ❌ Error (Re-assignment not allowed)
+
+// const ab = 70;       // ❌ Error (Redeclaration not allowed)
+
+
+
+// =======================================
+// Data Types in JavaScript
+// =======================================
+
+// Primitive Data Types
+
+// 1. Number
+var num1 = 100;
+console.log(typeof num1);     // number
+
+// 2. String
+var str1 = "Welcome to JavaScript";
+console.log(typeof str1);     // string
+
+// 3. Boolean
+var bool1 = true;
+console.log(typeof bool1);    // boolean
+
+// 4. Undefined
+var und1;
+console.log(typeof und1);     // undefined
+
+// 5. Null
+var nll1 = null;
+console.log(typeof nll1);     // object (This is a JavaScript Bug)
+
+
+
+// =======================================
+// Non-Primitive Data Types
+// =======================================
+
+// 1. Object
+var obj1 = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+console.log(typeof obj1);     // object
+
+// 2. Array
+var arr1 = [10, 20, 30, 40, 50];
+
+console.log(typeof arr1);     // object
+console.log(Array.isArray(arr1)); // true
+
+// 3. Function
+function func1() {
+    return "Hello";
+}
+
+console.log(typeof func1);    // function
