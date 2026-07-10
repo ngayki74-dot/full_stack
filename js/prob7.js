@@ -1,6 +1,6 @@
 //comparision operators                             ==,===,!=,!==,>,<,>=,<=
 let m = 10;
-let n = '10';
+let n = "10";
 console.log(m == n); // Equal to //output : true //(==)loose equality checks value only, not type (फक्त value तपासते)
 console.log(m === n);// Strict Equal to //output : false //(===)  strict equality checks value and type (दोन्ही तपासते)
 console.log(m != n); //data type=falus //(!=)  loose inequality checks value only, not type (फक्त value तपासते)
@@ -100,3 +100,77 @@ console.log(a||b)     //output true //(||)दोन Boolean conditions पैक
 //console.log(Boolean([]));     // true
 //console.log(Boolean({}));     // true
 
+//// ======================================
+// Comparison Operators
+// ==, ===, !=, !==, >, <, >=, <=
+// ======================================
+
+let m = 10;
+let n = "10";
+
+console.log(m == n);     // true
+// == (Loose Equality)
+// फक्त value compare करते, data type ignore करते.
+
+console.log(m === n);    // false
+// === (Strict Equality)
+// Value आणि Data Type दोन्ही compare करते.
+
+console.log(m != n);     // false
+// != (Loose Inequality)
+// Value सारखी असल्यामुळे false.
+
+console.log(m !== n);    // true
+// !== (Strict Inequality)
+// Value सारखी आहे पण data type वेगळा आहे.
+
+console.log(m > 5);      // true
+console.log(m < 5);      // false
+console.log(m >= 10);    // true
+console.log(m <= 10);    // true
+
+console.log(m > n);      // false
+// "10" Number मध्ये convert होते.
+
+console.log(m < n);      // false
+
+console.log(m >= n);     // true
+
+console.log(m <= n);     // true
+
+
+//// ======================================
+// Logical Operators
+// &&   ||   !
+// ======================================
+
+let x = 5;
+let y = 8;
+let z = 5;
+let e = "5";
+
+console.log(x);   // 5
+console.log(y);   // 8
+console.log(z);   // 5
+console.log(e);   // "5"
+
+// AND (&&)
+
+let a = x > y;
+console.log(a);   // false
+
+let b = z == e;
+console.log(b);   // true
+
+console.log(a && b);   // false
+// दोन्ही true असतील तरच true.
+
+// OR (||)
+
+console.log(a || b);   // true
+// एक जरी true असेल तर true.
+
+// NOT (!)
+
+console.log(!a);       // true
+console.log(!b);       // false
