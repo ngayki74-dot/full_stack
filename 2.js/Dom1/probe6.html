@@ -54,3 +54,198 @@
 
 </body>
 </html>
+
+
+<!-- हा DOM, Variables आणि Functions समजण्यासाठी खूप चांगला प्रोजेक्ट आहे.
+
+Code Explanation (Marathi + English)
+Step 1: HTML
+<h1 id="count">0</h1>
+
+हा <h1> सुरुवातीला 0 दाखवतो.
+
+<button onclick="decrease()">-</button>
+<button onclick="increase()">+</button>
+<button onclick="reset()">Reset</button>
+
+तीन buttons आहेत:
+
+- → Number कमी करतो.
++ → Number वाढवतो.
+Reset → Number पुन्हा 0 करतो.
+Step 2: JavaScript Variable
+let count = 0;
+Explanation
+count हा Variable आहे.
+यात Counter ची value store होते.
+सुरुवातीला 0 आहे.
+let countElement = document.getElementById("count");
+Explanation
+
+countElement मध्ये <h1 id="count"> store केला आहे.
+
+म्हणून प्रत्येक वेळी getElementById() लिहिण्याची गरज नाही.
+
+Step 3: Increase Function
+function increase() {
+    count++;
+    countElement.innerText = count;
+}
+काय होते?
+सुरुवातीला
+count = 0
+
+Button (+) वर Click
+
+count++
+
+म्हणजे
+
+count = count + 1
+
+आता
+
+count = 1
+
+नंतर
+
+countElement.innerText = count;
+
+Screen वर
+
+1
+
+दिसेल.
+
+Step 4: Decrease Function
+function decrease() {
+    count--;
+    countElement.innerText = count;
+}
+
+Button (-) वर Click
+
+count--
+
+म्हणजे
+
+count = count - 1
+
+जर
+
+count = 5
+
+असेल तर
+
+count = 4
+Step 5: Reset Function
+function reset() {
+    count = 0;
+    countElement.innerText = count;
+}
+
+Reset Button वर Click
+
+count = 0
+
+Screen वर
+
+0
+Flow Diagram
+User Click
+      │
+      ▼
+Function Call
+      │
+      ▼
+count Variable Changes
+      │
+      ▼
+innerText Updates
+      │
+      ▼
+Screen Changes
+Output
+Start
+
+0
+
+Click +
+
+1
+
+Click +
+
+2
+
+Click -
+
+1
+
+Click Reset
+
+0
+आणखी चांगला Counter
+
+Negative Values येऊ नयेत.
+
+function decrease() {
+    if (count > 0) {
+        count--;
+        countElement.innerText = count;
+    }
+}
+आणखी एक Feature
+
+Counter चा रंग बदलू शकतो.
+
+function increase() {
+    count++;
+    countElement.innerText = count;
+    countElement.style.color = "green";
+}
+
+function decrease() {
+    count--;
+    countElement.innerText = count;
+    countElement.style.color = "red";
+}
+
+function reset() {
+    count = 0;
+    countElement.innerText = count;
+    countElement.style.color = "black";
+}
+Interview Questions
+1. count++ म्हणजे काय?
+count++
+
+हे
+
+count = count + 1;
+
+यासारखेच आहे.
+
+2. count-- म्हणजे काय?
+count--
+
+हे
+
+count = count - 1;
+
+यासारखेच आहे.
+
+3. innerText का वापरतो?
+
+Screen वर दिसणारा text बदलण्यासाठी.
+
+countElement.innerText = count;
+लक्षात ठेवण्याचा नियम
+let count = 0; → Data Store
+getElementById() → HTML Element Access
+count++ / count-- → Value Change
+innerText → Screen Update
+onclick → Button Click Event
+
+हा Counter App DOM शिकण्यासाठी एक उत्कृष्ट उदाहरण आहे आणि याच पॅटर्नवर तुम्ही Like Button, Cart Quantity, Timer, Stopwatch, 
+Calculator यांसारखे प्रोजेक्ट्स सहज तयार करू शकता. -->

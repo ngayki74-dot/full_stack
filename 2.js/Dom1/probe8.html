@@ -30,3 +30,117 @@
 
 </body>
 </html>
+
+
+<!-- हा DOM मधील input.value आणि innerText समजण्यासाठी खूप चांगला example आहे.
+
+Code Explanation (Step by Step)
+1. HTML
+<h1> Elements
+<h1 id="getname"></h1>
+<h1 id="getpassword"></h1>
+
+हे दोन <h1> सुरुवातीला रिकामे आहेत. नंतर JavaScript यामध्ये input मधील data दाखवेल.
+
+Input Fields
+<input type="text" id="name" value="rahul">
+<input type="text" id="password" value="123456">
+id="name" → Name Input
+id="password" → Password Input
+value → सुरुवातीची default value
+Button
+<button onclick="getdata()">Submit</button>
+
+Button वर click केल्यावर getdata() function execute होईल.
+
+2. JavaScript
+Step 1 : Input Access
+let nameInput = document.getElementById("name");
+let passwordInput = document.getElementById("password");
+
+हे input elements variables मध्ये store करतात.
+
+Step 2 : <h1> Access
+let getname = document.getElementById("getname");
+let getpassword = document.getElementById("getpassword");
+
+हे <h1> elements access करतात.
+
+Step 3 : Function
+function getdata() {
+    getname.innerText = nameInput.value;
+    getpassword.innerText = passwordInput.value;
+}
+Flow
+User Input
+      │
+      ▼
+input.value
+      │
+      ▼
+innerText
+      │
+      ▼
+<h1> Display
+Output
+सुरुवातीला
+Name Input : rahul
+Password : 123456
+Submit Button Click
+rahul
+123456
+
+हे दोन <h1> मध्ये दिसेल.
+
+Better Version (Input रिकामे करा)
+
+जर Submit नंतर input रिकामे करायचे असतील:
+
+function getdata() {
+
+    getname.innerText = nameInput.value;
+    getpassword.innerText = passwordInput.value;
+
+    nameInput.value = "";
+    passwordInput.value = "";
+}
+Better Version (Validation)
+
+जर User ने काहीही टाइप केले नाही तर:
+
+function getdata() {
+
+    if (nameInput.value === "" || passwordInput.value === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    getname.innerText = nameInput.value;
+    getpassword.innerText = passwordInput.value;
+}
+Interview Questions
+Q1. .value कशासाठी वापरतात?
+
+Answer: Input, Textarea आणि Select मधील value मिळवण्यासाठी किंवा बदलण्यासाठी.
+
+input.value
+Q2. innerText कशासाठी वापरतात?
+
+Answer: HTML element मधील दिसणारा text मिळवण्यासाठी किंवा बदलण्यासाठी.
+
+element.innerText
+Q3. getElementById() कशासाठी वापरतात?
+
+Answer: HTML मधील एखादा element त्याच्या id च्या आधारे शोधण्यासाठी.
+
+document.getElementById("idName")
+लक्षात ठेवण्याचा नियम
+getElementById() → Element Access
+.value → Input मधील Data
+.innerText → Screen वर Text दाखवणे
+onclick → Button Click Event
+function → Logic Execute करणे
+
+हा example JavaScript DOM शिकण्यासाठी अतिशय महत्त्वाचा आहे. DOM शिकल्यानंतर तुम्ही Login Form, Signup Form, To-Do App,
+ Calculator, Counter,
+ Notes App यांसारखे प्रोजेक्ट्स सहज तयार करू शकता. -->

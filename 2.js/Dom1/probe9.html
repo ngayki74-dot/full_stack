@@ -39,3 +39,186 @@
 </script> 
 
 </html>
+
+
+<!-- Username Input
+<input type="text" placeholder="enter your username" id="username">
+
+User username टाइप करेल.
+
+Password Input
+<input type="text" placeholder="enter your password" id="password">
+
+User password टाइप करेल.
+
+टीप: Password साठी type="password" वापरणे अधिक योग्य आहे.
+
+<input type="password" id="password" placeholder="Enter your password">
+Button
+<button onclick="Login()">Login</button>
+
+Button वर click केल्यावर Login() function call होईल.
+
+Result
+<h2 id="result"></h2>
+
+Login यशस्वी किंवा अयशस्वी झाल्यावर message येथे दिसेल.
+
+JavaScript
+Step 1 : Correct Username & Password
+let username = "skillonit@123";
+let password = "123456";
+
+हे Hardcoded Credentials आहेत.
+
+Step 2 : Input Access
+let inputUsername = document.getElementById("username");
+let inputPassword = document.getElementById("password");
+
+Input elements access केले.
+
+Step 3 : Result Access
+let result = document.getElementById("result");
+
+Result <h2> access केला.
+
+Step 4 : Login Function
+function Login() {
+
+Button click झाल्यावर हा function execute होईल.
+
+Condition 1
+if (
+    inputUsername.value === username &&
+    inputPassword.value === password
+)
+
+जर दोन्ही बरोबर असतील
+
+Username ✔
+Password ✔
+
+तर
+
+result.innerText = "Login successful";
+result.style.color = "green";
+Output
+
+🟢 Login successful
+
+Condition 2
+else if (inputUsername.value !== username)
+
+जर Username चुकीचा असेल
+
+Username ❌
+
+Output
+
+🔴 Wrong username
+
+Condition 3
+else if (inputPassword.value !== password)
+
+जर Password चुकीचा असेल
+
+Output
+
+🔴 Wrong password
+
+Flow Diagram
+User Click Login
+        │
+        ▼
+Read Username & Password
+        │
+        ▼
+Compare with Stored Data
+        │
+ ┌──────┼───────────┐
+ │      │           │
+ ▼      ▼           ▼
+Success Wrong User Wrong Password
+Output
+Case 1
+Username : skillonit@123
+Password : 123456
+
+Output
+
+Login successful
+Case 2
+Username : Rahul
+Password : 123456
+
+Output
+
+Wrong username
+Case 3
+Username : skillonit@123
+Password : 111111
+
+Output
+
+Wrong password
+आणखी चांगला Code
+
+रिकामे Input तपासा.
+
+function Login() {
+
+    if (inputUsername.value === "" || inputPassword.value === "") {
+
+        result.innerText = "Please fill all fields";
+        result.style.color = "orange";
+        return;
+    }
+
+    if (
+        inputUsername.value === username &&
+        inputPassword.value === password
+    ) {
+
+        result.innerText = "Login Successful";
+        result.style.color = "green";
+
+    } else if (inputUsername.value !== username) {
+
+        result.innerText = "Wrong Username";
+        result.style.color = "red";
+
+    } else {
+
+        result.innerText = "Wrong Password";
+        result.style.color = "red";
+
+    }
+
+}
+Best Practice
+
+Password Input असे ठेवा:
+
+<input
+    type="password"
+    id="password"
+    placeholder="Enter your password">
+
+यामुळे password टाइप करताना अक्षरे ●●●●● अशा स्वरूपात दिसतील.
+
+Interview Questions
+=== आणि !== म्हणजे काय?
+Operator	Meaning
+===	Value आणि Data Type दोन्ही समान आहेत का?
+!==	Value किंवा Data Type वेगळे आहेत का?
+
+उदाहरण:
+
+5 === 5      // true
+5 === "5"    // false
+5 !== "5"    // true
+
+हा Login Program DOM, if-else, value, innerText, आणि
+ Event Handling समजण्यासाठी एक उत्तम सुरुवातीचा प्रोजेक्ट आहे. पुढे यामध्ये तुम्ही Show/Hide Password, Remember Me,
+  LocalStorage Login,
+ आणि Form Validation सारखी features सहज जोडू शकता. -->

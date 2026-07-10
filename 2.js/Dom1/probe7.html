@@ -26,3 +26,83 @@
     }
 </script>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend 1</title>
+</head>
+<body>
+
+    <h1 id="getname"></h1>
+    <h1 id="getpassword"></h1>
+
+    <div>
+        <input type="text" id="name" placeholder="Enter your name" value="rahul">
+
+        <input type="text" id="password" placeholder="Enter your password" value="234567">
+
+        <button onclick="getdata()">Submit</button>
+    </div>
+
+<script>
+
+let name = document.getElementById("name");
+let password = document.getElementById("password");
+
+let getname = document.getElementById("getname");
+let getpassword = document.getElementById("getpassword");
+
+function getdata() {
+
+    getname.innerText = name.value;
+
+    getpassword.innerText = password.value;
+
+}
+
+</script>
+
+</body>
+</html> 
+
+Output
+सुरुवातीला
+Input Name : rahul
+Input Password : 234567
+Button वर क्लिक केल्यावर
+rahul
+234567
+
+हे दोन <h1> मध्ये दिसेल.
+
+Flow Diagram
+User Input
+      │
+      ▼
+<input>.value
+      │
+      ▼
+getdata() Function
+      │
+      ▼
+innerText
+      │
+      ▼
+<h1> Update
+Interview Tip
+Property	Use
+value	Input मधील value घेण्यासाठी
+innerText	<h1>, <p>, <div> मधील text बदलण्यासाठी
+getElementById()	HTML element access करण्यासाठी
+
+टीप: name हा JavaScript मध्ये एक सामान्य global property असल्यामुळे variable म्हणून name वापरण्याऐवजी nameInput आणि passwordInput अशी नावे वापरणे अधिक चांगली पद्धत आहे.
+
+उदा.:
+
+let nameInput = document.getElementById("name");
+let passwordInput = document.getElementById("password");
+
+यामुळे code अधिक स्पष्ट आणि maintain करायला सोपा होतो.-->

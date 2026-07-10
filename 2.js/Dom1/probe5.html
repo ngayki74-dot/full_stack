@@ -17,8 +17,123 @@
             let inputValue = document.getElementById("myInput").value;
             document.getElementById("heading").innerText = inputValue;
         }
-        //input.value कसे घ्यायचे                 //User input वापरून text बदलणे
+      //  input.value कसे घ्यायचे                 //User input वापरून text बदलणे
     </script>
 
 </body>
 </html>
+
+
+<!-- तुमचा code 100% बरोबर आहे. 
+
+हा code Input Box मधून user ने टाइप केलेला text घेऊन <h1> मध्ये दाखवतो.
+
+Code Explanation (Marathi + English)
+HTML
+<h1 id="heading">Skillonit</h1>
+सुरुवातीला <h1> मध्ये Skillonit दिसेल.
+<input type="text" id="myInput" placeholder="username">
+type="text" → User text लिहू शकतो.
+id="myInput" → JavaScript मधून access करण्यासाठी.
+placeholder="username" → Input रिकामा असताना दिसणारा hint.
+<button onclick="changeHeading()">Submit</button>
+
+Button वर click केल्यावर changeHeading() function call होईल.
+
+JavaScript
+function changeHeading() {
+
+changeHeading() नावाचा function तयार केला.
+
+let inputValue = document.getElementById("myInput").value;
+Explanation
+document → पूर्ण HTML Page.
+getElementById("myInput") → Input Element मिळवतो.
+.value → User ने Input मध्ये टाइप केलेला text मिळवतो.
+
+उदा.
+
+जर User ने लिहिले
+
+Nitin
+
+तर
+
+inputValue = "Nitin";
+document.getElementById("heading").innerText = inputValue;
+
+याचा अर्थ
+
+<h1> मधील text बदलून Input मधील value दाखवा.
+
+Output
+सुरुवातीला
+Skillonit
+User Input
+Nitin
+Button Click
+
+Output
+
+Nitin
+Flow Diagram
+User types text
+        │
+        ▼
+<input>
+        │
+        ▼
+.value
+        │
+        ▼
+Variable (inputValue)
+        │
+        ▼
+heading.innerText
+        │
+        ▼
+<h1> changes
+आणखी चांगले Example
+
+Input रिकामा असेल तर message दाखवा.
+
+function changeHeading() {
+
+    let inputValue = document.getElementById("myInput").value;
+
+    if (inputValue === "") {
+        alert("Please enter your name");
+    } else {
+        document.getElementById("heading").innerText = inputValue;
+    }
+
+}
+Input साफ करायचा असेल
+
+Button click झाल्यावर Input रिकामा करा.
+
+function changeHeading() {
+
+    let input = document.getElementById("myInput");
+
+    document.getElementById("heading").innerText = input.value;
+
+    input.value = "";
+}
+Interview Questions
+Q1. .value म्हणजे काय?
+
+Answer:
+.value ही HTML Input Element ची Property आहे. ती Input मधील value मिळवण्यासाठी किंवा बदलण्यासाठी वापरली जाते.
+
+Q2. innerText आणि .value मध्ये फरक?
+innerText	.value
+<h1>, <p>, <div> सारख्या elements चा text मिळवतो/बदलतो	<input>, <textarea>, <select> मधील value मिळवतो/बदलतो
+Visible text साठी वापरतो	User ने टाइप केलेला data साठी वापरतो
+लक्षात ठेवण्याचा सोपा नियम
+innerText → Display होणारा Text
+innerHTML → HTML + Text
+textContent → पूर्ण Text (Hidden सहित)
+.value → Input Box मधील Value
+
+ही चार properties (innerText, innerHTML, textContent, .value) DOM शिकताना सर्वात जास्त वापरल्या जातात. -->

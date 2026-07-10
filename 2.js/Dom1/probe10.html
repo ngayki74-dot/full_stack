@@ -42,4 +42,167 @@
 
 </body>
 </html>
+
+
+<!-- Step by Step Explanation
+1. Correct Credentials
+let correctUsername = "rahul@123";
+let correctPassword = "123456";
+
+हे Hardcoded Username आणि Password आहेत.
+
+2. HTML Elements Access
+let inputUsername = document.getElementById("username");
+let inputPassword = document.getElementById("password");
+let result = document.getElementById("result");
+inputUsername → Username input
+inputPassword → Password input
+result → Result दाखवणारा <h2>
+3. Login Function
+function login() {
+
+Button वर click केल्यावर हा function execute होतो.
+
+4. First Condition
+if (
+    inputUsername.value === correctUsername &&
+    inputPassword.value === correctPassword
+)
+याचा अर्थ
+
+दोन्ही value बरोबर आहेत का?
+
+Username ✔
+Password ✔
+
+जर होय तर:
+
+result.innerText = "Login Successful";
+result.style.color = "green";
+
+Output:
+
+🟢 Login Successful
+
+5. Second Condition
+else if (inputUsername.value !== correctUsername)
+
+जर Username चुकीचा असेल:
+
+result.innerText = "Username wrong";
+
+Output:
+
+🔴 Username wrong
+
+6. Third Condition
+else if (inputPassword.value !== correctPassword)
+
+जर Password चुकीचा असेल:
+
+result.innerText = "Password wrong";
+
+Output:
+
+🔴 Password wrong
+
+Flow Chart
+User Enter Username & Password
+              │
+              ▼
+        Click Login
+              │
+              ▼
+      Compare Username
+              │
+        Compare Password
+              │
+      ┌───────┼────────┐
+      │       │        │
+      ▼       ▼        ▼
+ Success  Wrong User  Wrong Password
+Output Examples
+Case 1
+Username : rahul@123
+Password : 123456
+
+Output:
+
+Login Successful
+Case 2
+Username : abc
+Password : 123456
+
+Output:
+
+Username wrong
+Case 3
+Username : rahul@123
+Password : 111111
+
+Output:
+
+Password wrong
+आणखी चांगली Version (Validation)
+
+जर User ने काहीही टाइप केले नाही तर:
+
+function login() {
+
+    if (inputUsername.value === "" || inputPassword.value === "") {
+        result.innerText = "Please enter username and password";
+        result.style.color = "orange";
+        return;
+    }
+
+    if (
+        inputUsername.value === correctUsername &&
+        inputPassword.value === correctPassword
+    ) {
+        result.innerText = "Login Successful";
+        result.style.color = "green";
+    } else if (inputUsername.value !== correctUsername) {
+        result.innerText = "Username wrong";
+        result.style.color = "red";
+    } else {
+        result.innerText = "Password wrong";
+        result.style.color = "red";
+    }
+}
+Interview Questions
+1. === म्हणजे काय?
+
+Strict Equality Operator.
+
+5 === 5      // true
+5 === "5"    // false
+2. && म्हणजे काय?
+
+Logical AND Operator.
+
+true && true     // true
+true && false    // false
+
+दोन्ही conditions true असल्या तरच true मिळते.
+
+3. .value कशासाठी वापरतात?
+
+Input Field मधील value मिळवण्यासाठी.
+
+inputUsername.value
+Best Practice
+
+तुमचा सध्याचा logic चालतो. पण जर Username आणि Password दोन्ही चुकीचे असतील, तर फक्त "Username wrong" दिसेल.
+
+जर दोन्ही चुकीचे असल्यास वेगळा message दाखवायचा असेल तर:
+
+if (
+    inputUsername.value !== correctUsername &&
+    inputPassword.value !== correctPassword
+) {
+    result.innerText = "Username and Password are wrong";
+    result.style.color = "red";
+}
+
+अशा प्रकारे user ला अधिक स्पष्ट माहिती मिळेल. -->
  
