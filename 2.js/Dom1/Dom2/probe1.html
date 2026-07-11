@@ -23,3 +23,82 @@
 //head.innerText्   या element मधील text काढतो.console.log(...)तो text browser च्या console मध्ये print करतो.
 </script>
 </html>
+
+
+
+<!-- तुम्ही एकच id="head" दोन elements ला दिला आहे.
+
+<h4 id="head">I am heading 4</h4>
+<h5 id="head">I am heading 5</h5>
+
+HTML मध्ये id नेहमी unique (एकदाच) असला पाहिजे.
+
+getElementById() काय करतो?
+let head = document.getElementById("head");
+console.log(head.innerText);
+
+हा कोड id="head" असलेला पहिला element शोधतो.
+
+म्हणून Output:
+
+I am heading 4
+
+I am heading 5 print होणार नाही.
+
+✅ योग्य कोड
+<h4 id="head1">I am heading 4</h4>
+<h5 id="head2">I am heading 5</h5>
+
+JavaScript
+
+let head1 = document.getElementById("head1");
+let head2 = document.getElementById("head2");
+
+console.log(head1.innerText);
+console.log(head2.innerText);
+Output
+I am heading 4
+I am heading 5
+getElementById() ची Syntax
+document.getElementById("idName");
+
+उदाहरण
+
+let element = document.getElementById("head");
+Step by Step
+Step 1
+<h4 id="head">I am heading 4</h4>
+
+id चे नाव head आहे.
+
+Step 2
+let head = document.getElementById("head");
+
+Browser संपूर्ण HTML मध्ये id="head" शोधतो.
+
+Step 3
+console.log(head.innerText);
+
+innerText त्या element मधील text देतो.
+
+Output
+
+I am heading 4
+लक्षात ठेवा
+Selector	किती Elements मिळतात?
+getElementById()	फक्त 1 element
+getElementsByClassName()	अनेक elements
+querySelector()	पहिला matching element
+querySelectorAll()	सर्व matching elements
+तुमच्या HTML मध्ये अजून एक गोष्ट
+
+तुमच्याकडे class="heading" तीन elements ला दिलेला आहे.
+
+<h1 class="heading">...</h1>
+<h2 class="heading">...</h2>
+<h3 class="heading">...</h3>
+
+हे योग्य आहे, कारण class अनेक elements ला देता येतो, पण id नाही.
+
+टीप: जर तुम्ही Developer Tools (F12 → Console) मध्ये हा कोड चालवला,
+ तर getElementById("head") नेहमी पहिल्या id="head" असलेल्या element (<h4>) कडेच निर्देश करेल. -->

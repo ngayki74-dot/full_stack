@@ -32,3 +32,157 @@
 </script>
 </html>
  
+
+
+<!-- खूप छान! 👏 हा कोड बरोबर आहे. तुम्ही आता JavaScript मधील Events शिकत आहात.
+
+चला प्रत्येक Event समजून घेऊ.
+
+Output
+
+Page Load झाल्यावर:
+
+Event
+I am Heading 2
+
+[ Click ]
+1. Click Event
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function abc() {
+    alert("Clicked me");
+});
+काय होते?
+
+जेव्हा User Button वर Click करतो,
+
+↓
+
+click event fire होतो
+
+↓
+
+abc() function execute होतो
+
+↓
+
+Clicked me
+
+alert दिसतो.
+
+2. Mouseover Event
+head.addEventListener("mouseover", function () {
+    head.style.color = "red";
+});
+काय होते?
+
+Mouse <h1> वर गेला की
+
+Event
+
+चा color Red होतो.
+
+3. Mouseout Event
+head2.addEventListener("mouseout", function () {
+    head2.style.color = "blue";
+});
+काय होते?
+
+Mouse <h2> वरून बाहेर गेला की
+
+I am Heading 2
+
+चा color Blue होतो.
+
+Event Flow
+Page Load
+      │
+      ▼
+Button Click
+      │
+      ▼
+Alert Open
+
+------------------------
+
+Mouse → h1
+      │
+      ▼
+Red Color
+
+------------------------
+
+Mouse leaves h2
+      │
+      ▼
+Blue Color
+आणखी छान बनवू शकता
+
+जर Mouse बाहेर गेल्यावर पुन्हा काळा रंग करायचा असेल:
+
+head.addEventListener("mouseover", function () {
+    head.style.color = "red";
+});
+
+head.addEventListener("mouseout", function () {
+    head.style.color = "black";
+});
+
+जर h2 वर Mouse आला की Green करायचा असेल:
+
+head2.addEventListener("mouseover", function () {
+    head2.style.color = "green";
+});
+
+head2.addEventListener("mouseout", function () {
+    head2.style.color = "blue";
+});
+काही Common Events
+Event	कधी चालतो?
+click	Click केल्यावर
+dblclick	Double Click केल्यावर
+mouseover	Mouse वर आल्यावर
+mouseout	Mouse बाहेर गेल्यावर
+mousemove	Mouse हलवल्यावर
+keydown	Keyboard Key दाबल्यावर
+keyup	Key सोडल्यानंतर
+input	Input मध्ये typing करताना
+change	Input value बदलल्यावर
+submit	Form Submit झाल्यावर
+📝 छोटी सूचना
+
+या ठिकाणी:
+
+btn.addEventListener("click", function abc() {
+    alert("Clicked me");
+});
+
+abc हे function नाव आवश्यक नाही. तुम्ही anonymous function वापरू शकता:
+
+btn.addEventListener("click", function () {
+    alert("Clicked me");
+});
+
+किंवा arrow function:
+
+btn.addEventListener("click", () => {
+    alert("Clicked me");
+});
+
+ही दोन्ही आधुनिक JavaScript मध्ये खूप वापरली जातात.
+
+🎯 Practice Challenge
+
+हे करून पाहा:
+
+Double Click केल्यावर <h1> चा text "Double Clicked!" करा.
+Mouseover वर <h2> चा background yellow करा.
+Mouseout झाल्यावर background पुन्हा white करा.
+Button वर Click केल्यावर page चा background lightblue करा.
+
+यामुळे click, dblclick, mouseover, mouseout आणि style यांचा चांगला सराव होईल.
+
+Meet Codex in the desktop app
+A coding agent that helps you build and ship with AI, included for free in your ChatGPT plan.
+Download the app
+Learn more -->

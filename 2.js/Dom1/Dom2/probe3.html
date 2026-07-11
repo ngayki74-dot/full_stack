@@ -69,3 +69,325 @@ tag	getElementsByTagName()
 </script>
 
 </html>
+
+
+
+<!-- तुमचा कोड बरोबर आहे आणि DOM शिकण्यासाठी चांगले उदाहरण आहे. फक्त काही लहान सुधारणा आणि स्पष्टीकरण देतो.
+
+1. id, class, tag मधील फरक
+प्रकार	वापर	किती वेळा
+id	एक element ओळखण्यासाठी	फक्त एकदाच
+class	अनेक elements ला group करण्यासाठी	अनेकदा
+tag	Element चा प्रकार (p, h1, div...)	सगळीकडे
+2. JavaScript Methods
+ID
+let dhoni = document.getElementById("Dhoni");
+
+फक्त एक element मिळतो.
+
+Class
+let csk = document.getElementsByClassName("csk");
+
+HTMLCollection मिळते.
+
+Tag
+let p = document.getElementsByTagName("p");
+
+सर्व <p> elements मिळतात.
+
+3. querySelector() आणि querySelectorAll()
+ID
+document.querySelector("#Dhoni");
+
+# म्हणजे id.
+
+Class
+document.querySelectorAll(".csk");
+
+. म्हणजे class.
+
+Tag
+document.querySelectorAll("p");
+
+काहीच नाही म्हणजे tag.
+
+4. तुमचा Style Code
+let Dhoni = document.getElementById("Dhoni");
+
+Dhoni.style.backgroundColor = "yellow";
+Dhoni.style.color = "red";
+Dhoni.style.fontSize = "40px";
+
+यामुळे Dhoni paragraph असा दिसेल:
+
+🟨 Yellow Background
+🔴 Red Text
+🔠 Font Size = 40px
+5. RCB Example
+let rcb = document.getElementsByClassName("rcb");
+
+rcb[0].style.backgroundColor = "red";
+rcb[1].style.backgroundColor = "blue";
+
+Output
+
+Player	Background
+Virat	🔴 Red
+ABD	🔵 Blue
+6. Loop
+for (let i = 0; i < rcb.length; i++) {
+    rcb[i].style.backgroundColor = "red";
+}
+
+हे loop नंतर दोघांचाही background लाल होईल.
+
+म्हणजे आधी दिलेला
+
+rcb[1].style.backgroundColor = "blue";
+
+हा color loop मुळे overwrite होईल.
+
+अंतिम Output
+
+Player	Background
+Virat	🔴 Red
+ABD	🔴 Red
+7. CSS Property → JavaScript Property
+CSS	JavaScript
+background-color	backgroundColor
+font-size	fontSize
+font-style	fontStyle
+text-align	textAlign
+border-radius	borderRadius
+margin-top	marginTop
+padding-left	paddingLeft
+8. आणखी सोपा Loop
+let csk = document.getElementsByClassName("csk");
+
+for (let i = 0; i < csk.length; i++) {
+    console.log(csk[i].innerText);
+}
+
+Output:
+
+I am Dhoni from Chennai
+I am Raina from Chennai
+⭐ एक छोटी सूचना
+
+JavaScript मध्ये variable names सामान्यतः camelCase मध्ये लिहितात. त्यामुळे:
+
+let dhoni = document.getElementById("Dhoni");
+
+हे
+
+let Dhoni = document.getElementById("Dhoni");
+
+पेक्षा अधिक प्रचलित आहे. यामुळे code अधिक readable आणि standard राहतो.
+
+तुम्ही DOM Basics (getElementById, getElementsByClassName, getElementsByTagName)
+ चांगले समजत आहात. पुढचा टप्पा म्हणून querySelector(), querySelectorAll(), createElement(), 
+append(), remove() आणि Event Listeners (addEventListener) शिकणे उपयुक्त ठरेल.
+DOM
+│
+├── 1. getElementById() ✅
+├── 2. getElementsByClassName() ✅
+├── 3. getElementsByTagName() ✅
+├── 4. querySelector()
+├── 5. querySelectorAll()
+├── 6. innerText
+├── 7. innerHTML
+├── 8. style
+├── 9. setAttribute()
+├── 10. getAttribute()
+├── 11. createElement()
+├── 12. append()
+├── 13. remove()
+├── 14. addEventListener()
+├── 15. Forms
+└── 16. Mini Projects
+MINI PROJECTE
+छान! 🎉 DOM शिकण्यासाठी खालील 10 Mini Projects करा. हे पूर्ण केले तर getElementById(), getElementsByClassName(), querySelector(), addEventListener() यांचा चांगला सराव होईल.
+
+🟢 Project 1: Change Text
+Goal
+
+Button वर क्लिक केल्यावर Heading बदला.
+
+Before
+Welcome
+
+Click Button
+
+After
+Welcome to SkillOnIT Academy
+
+Concepts:
+
+getElementById()
+innerText
+addEventListener()
+🟢 Project 2: Change Background Color
+Goal
+
+Button वर क्लिक केल्यावर Background Color बदला.
+
+White
+   ↓
+Yellow
+
+Concepts:
+
+style.backgroundColor
+click event
+🟢 Project 3: Light ON / OFF 💡
+OFF Button
+ON Button
+
+Click ON → 💡 Yellow
+
+Click OFF → ⚫ Gray
+
+Concepts:
+
+style
+click
+🟢 Project 4: Counter App
+Count : 0
+
+➕ Increase
+➖ Decrease
+🔄 Reset
+
+Output
+
+0
+1
+2
+3
+2
+1
+0
+
+Concepts
+
+Variable
+innerText
+Event Listener
+🟢 Project 5: Student Attendance
+Rahul
+Amit
+Sneha
+Pooja
+
+Click Student →
+
+Background Green
+
+Again Click →
+
+Background White
+
+Concepts
+
+querySelectorAll()
+Loop
+Events
+🟢 Project 6: To-Do List ✅
+Input
+
+[ Add ]
+
+Buy Milk
+Study JavaScript
+Go Gym
+
+Concepts
+
+createElement()
+append()
+input.value
+🟢 Project 7: Image Gallery
+🌄
+🌊
+🌸
+
+Click image →
+
+Image मोठी करा
+
+Concepts
+
+querySelectorAll()
+style.width
+🟢 Project 8: Digital Clock
+12:35:40 PM
+
+Live Time
+
+Concepts
+
+Date()
+setInterval()
+🟢 Project 9: BMI Calculator
+Weight
+
+Height
+
+Calculate
+
+Output
+
+BMI = 23.4
+
+Normal
+
+Concepts
+
+Input
+Math
+innerText
+🟢 Project 10: Quiz App
+HTML म्हणजे काय?
+
+○ Language
+○ Browser
+○ Database
+
+Submit
+
+Score
+
+8 / 10
+
+Concepts
+
+Radio Button
+Events
+Conditions
+⭐ Bonus Projects
+🎨 Color Picker
+🌙 Dark / Light Mode
+⏰ Alarm Clock
+❌ Tic Tac Toe
+🪨 Rock Paper Scissors
+🔢 Guess the Number
+🧮 Calculator
+⌨️ Typing Speed Test
+📅 Calendar
+🌦️ Weather App (API)
+📚 Recommended Learning Order
+Day	Project
+Day 1	Change Text
+Day 2	Change Color
+Day 3	Light ON/OFF
+Day 4	Counter App
+Day 5	Attendance
+Day 6	To-Do List
+Day 7	Image Gallery
+Day 8	Digital Clock
+Day 9	BMI Calculator
+Day 10	Quiz App
+🎯 Challenge
+
+मी तुम्हाला 30+ Mini Projects (Easy → Medium → Advanced) देऊ शकतो,
+ जे Full Stack इंटरव्ह्यू आणि प्रॅक्टिससाठी खूप उपयुक्त आहेत. -->

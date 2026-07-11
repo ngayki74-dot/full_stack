@@ -21,3 +21,106 @@
     console.log(p.innerText)                         
 </script>
 </html>
+
+
+<!-- तुम्ही querySelector() योग्य प्रकारे वापरला आहे.
+
+तुमचा Code
+let p = document.querySelector("p");
+console.log(p.innerText);
+काय होते?
+
+querySelector("p")
+
+Browser संपूर्ण HTML मध्ये पहिला <p> शोधतो.
+तो element p variable मध्ये store होतो.
+
+म्हणून
+
+console.log(p.innerText);
+
+पहिल्या <p> मधील text print करतो.
+
+Output
+Thish is a Frist Element
+Step by Step
+HTML
+<p>Thish is a Frist Element</p>   ← First
+<p>Thish is a Secont Element</p>
+<p>Thish is a Third Element</p>
+Step 1
+let p = document.querySelector("p");
+
+Browser ला सांगतो:
+
+"पहिला <p> शोध."
+
+तो शोधतो:
+
+<p>Thish is a Frist Element</p>
+Step 2
+console.log(p.innerText);
+
+Output
+
+Thish is a Frist Element
+जर दुसरा <p> हवा असेल?
+
+querySelector() ने नेहमी पहिलाच element मिळतो.
+
+दुसरा किंवा तिसरा <p> मिळवण्यासाठी:
+
+let p = document.querySelectorAll("p");
+
+console.log(p[1].innerText);
+Output
+Thish is a Secont Element
+सर्व <p> Print करायचे
+let p = document.querySelectorAll("p");
+
+for (let i = 0; i < p.length; i++) {
+    console.log(p[i].innerText);
+}
+Output
+Thish is a Frist Element
+Thish is a Secont Element
+Thish is a Third Element
+querySelector() कशासाठी वापरता येतो?
+1. Tag
+document.querySelector("p");
+2. Class
+<p class="para">Hello</p>
+document.querySelector(".para");
+3. ID
+<h1 id="heading">Welcome</h1>
+document.querySelector("#heading");
+querySelector() vs querySelectorAll()
+Method	काय मिळते?	Return Type
+querySelector()	पहिला matching element	Element
+querySelectorAll()	सर्व matching elements	NodeList
+📝 छोट्या सुधारणा
+
+तुमच्या HTML मध्ये काही spelling चुका आहेत:
+
+<p>Thish is a Frist Element</p>
+<p>Thish is a Secont Element</p>
+
+अधिक योग्य असे:
+
+<p>This is the First Element</p>
+<p>This is the Second Element</p>
+<p>This is the Third Element</p>
+🎯 Practice
+
+खालील HTML वापरून प्रयत्न करा:
+
+<h1 id="title">SkillOnIT Academy</h1>
+
+<p class="student">Rahul</p>
+<p class="student">Amit</p>
+<p class="student">Sneha</p>
+querySelector("#title") वापरून SkillOnIT Academy print करा.
+querySelector(".student") वापरून पहिला student print करा.
+querySelectorAll(".student") वापरून loop मधून तिन्ही students print करा.
+
+हा सराव केल्यावर querySelector() आणि querySelectorAll() दोन्ही चांगले समजतील. -->

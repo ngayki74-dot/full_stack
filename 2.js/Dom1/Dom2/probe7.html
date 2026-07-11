@@ -44,3 +44,138 @@ document.querySelectorAll("p")[2] // tag
     });
 </script>
 </html>
+
+
+
+<!-- खूप छान! 👏 हा कोड 100% बरोबर आहे. तुम्ही आता querySelector(), querySelectorAll() आणि addEventListener()
+  एकत्र वापरला आहे, जे DOM मधील महत्त्वाचे concepts आहेत.
+
+Code Flow
+Step 1: Elements निवडणे
+let first = document.querySelector("#firstPara");
+let second = document.querySelector(".secondPara");
+let third = document.querySelectorAll("p")[2];
+let button = document.querySelector("#changeBtn");
+
+यामध्ये:
+
+#firstPara → पहिला paragraph (id)
+.secondPara → दुसरा paragraph (class)
+querySelectorAll("p")[2] → तिसरा paragraph
+#changeBtn → Button
+Step 2: Event Listener
+button.addEventListener("click", function() {
+
+याचा अर्थ:
+
+जेव्हा Button वर click होईल, तेव्हा function मधील सर्व code execute होईल.
+
+Step 3: First Paragraph
+first.style.color = "white";
+first.style.backgroundColor = "blue";
+first.innerText = "First Paragraph Updated on Click!";
+
+Output:
+
+🟦 Blue Background
+
+⚪ White Text
+
+First Paragraph Updated on Click!
+Step 4: Second Paragraph
+second.style.color = "yellow";
+second.style.backgroundColor = "green";
+second.innerText = "Second Paragraph Updated on Click!";
+
+Output:
+
+🟩 Green Background
+
+🟨 Yellow Text
+
+Second Paragraph Updated on Click!
+Step 5: Third Paragraph
+third.style.color = "red";
+third.style.backgroundColor = "black";
+third.innerText = "Third Paragraph Updated on Click!";
+
+Output:
+
+⬛ Black Background
+
+🔴 Red Text
+
+Third Paragraph Updated on Click!
+Execution Flow
+Page Load
+      │
+      ▼
+Elements Select झाले
+      │
+      ▼
+User Button वर Click करतो
+      │
+      ▼
+addEventListener चालतो
+      │
+      ▼
+पहिला Paragraph बदलतो
+      │
+      ▼
+दुसरा Paragraph बदलतो
+      │
+      ▼
+तिसरा Paragraph बदलतो
+आणखी चांगली पद्धत (Loop वापरून)
+
+जर सर्व paragraphs ला एकाच प्रकारे बदलायचे असेल तर:
+
+let paragraphs = document.querySelectorAll("p");
+
+button.addEventListener("click", function () {
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.backgroundColor = "black";
+        paragraphs[i].style.color = "white";
+    }
+});
+
+यामुळे प्रत्येक paragraph साठी वेगळा code लिहावा लागणार नाही.
+
+तुम्ही आतापर्यंत काय शिकलात?
+
+✅ getElementById()
+
+✅ getElementsByClassName()
+
+✅ getElementsByTagName()
+
+✅ querySelector()
+
+✅ querySelectorAll()
+
+✅ style
+
+✅ innerText
+
+✅ addEventListener()
+
+🎯 पुढचा Mini Project
+
+आता Counter App बनवण्याचा प्रयत्न करा.
+
+Count : 0
+
+[ + Increase ]
+[ - Decrease ]
+[ Reset ]
+
+यामध्ये तुम्ही शिकाल:
+
+Variable (count)
+innerText
+addEventListener()
+if condition
+Button Events
+
+हा DOM शिकण्यासाठी सर्वात लोकप्रिय आणि उपयुक्त Mini Project आहे.
+ -->

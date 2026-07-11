@@ -59,4 +59,98 @@ The getElementByTag()Method
 Method	काय देते	Notes
 getElementsByTagName("tag")	tag ने element शोधतो	HTMLCollection, index 0 पासून सुरू
 getElementsByClassName("class")	class ने element शोधतो	HTMLCollection
-getElementById("id")	id ने element शोधतो	unique element -->
+getElementById("id")	id ने element शोधतो	unique element 
+
+
+तुमचा कोड बरोबर आहे. 👍 चला समजून घेऊया.
+
+getElementsByTagName()
+Syntax
+document.getElementsByTagName("tagName");
+
+हे दिलेल्या tag चे सर्व elements शोधते आणि HTMLCollection परत करते.
+
+तुमचा HTML
+<h1>The Document Object</h1>
+<h1>The getElementByTag() Method</h1>
+
+<p>I am para 1</p>
+<p>I am para 2</p>
+
+<div>I am box</div>
+JavaScript
+let h1 = document.getElementsByTagName("h1");
+console.log(h1);
+Output (Console)
+HTMLCollection(2)
+0: <h1>The Document Object</h1>
+1: <h1>The getElementByTag() Method</h1>
+length: 2
+पहिला <h1>
+console.log(h1[0].innerText);
+Output
+The Document Object
+दुसरा <h1>
+console.log(h1[1].innerText);
+Output
+The getElementByTag() Method
+Loop वापरून सर्व <h1> Print करा
+for (let i = 0; i < h1.length; i++) {
+    console.log(h1[i].innerText);
+}
+Output
+The Document Object
+The getElementByTag() Method
+सर्व <p> Elements मिळवा
+let para = document.getElementsByTagName("p");
+
+for (let i = 0; i < para.length; i++) {
+    console.log(para[i].innerText);
+}
+Output
+I am para 1
+I am para 2
+सर्व <li> Elements मिळवा
+let list = document.getElementsByTagName("li");
+
+for (let i = 0; i < list.length; i++) {
+    console.log(list[i].innerText);
+}
+Output
+Coffee
+Tea
+Milk
+
+टीप: तुमच्या HTML मध्ये Coffce असे लिहिले आहे. योग्य स्पेलिंग Coffee आहे.
+
+सर्व <h1> चा Color बदला
+let h1 = document.getElementsByTagName("h1");
+
+for (let i = 0; i < h1.length; i++) {
+    h1[i].style.color = "blue";
+}
+
+आता दोन्ही <h1> निळ्या रंगात दिसतील.
+
+getElementsByTagName() ची वैशिष्ट्ये
+Method	Return Type	किती Elements?
+getElementById()	Element	1
+getElementsByClassName()	HTMLCollection	अनेक
+getElementsByTagName()	HTMLCollection	अनेक
+📝 छोटी सुधारणा
+
+तुमच्या Heading मध्ये:
+
+<h1>The getElementByTag()Method</h1>
+
+असे आहे. प्रत्यक्ष JavaScript Method चे नाव:
+
+getElementsByTagName()
+
+आणि Heading अधिक योग्यरित्या अशी लिहू शकता:
+
+<h1>The getElementsByTagName() Method</h1>
+
+तुम्ही आता getElementById(), getElementsByClassName() आणि getElementsByTagName() शिकला आहात. 
+पुढचा आणि सर्वात जास्त वापरला जाणारा विषय म्हणजे querySelector() आणि querySelectorAll(), 
+जे आधुनिक JavaScript मध्ये खूप लोकप्रिय आहेत.-->

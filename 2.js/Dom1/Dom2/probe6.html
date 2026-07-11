@@ -39,3 +39,129 @@ document.querySelectorAll("p")[2] // tag
     third.innerText = "Third Paragraph Updated!";
 </script>
 </html>
+
+
+
+
+<!-- खूप छान! 👏 हा कोड 100% बरोबर आहे आणि querySelector() व querySelectorAll() समजण्यासाठी उत्तम उदाहरण आहे.
+
+चला प्रत्येक भाग समजून घेऊ.
+
+HTML
+<p id="firstPara">This is the First Paragraph</p>
+<p class="secondPara">This is the Second Paragraph</p>
+<p>This is the Third Paragraph</p>
+
+तुमच्याकडे 3 paragraphs आहेत.
+
+Paragraph	Selector
+First	#firstPara (id)
+Second	.secondPara (class)
+Third	p (tag)
+1. ID Selector
+let first = document.querySelector("#firstPara");
+# म्हणजे id
+querySelector() पहिला matching element शोधतो.
+first.style.color = "white";
+first.style.backgroundColor = "blue";
+first.innerText = "First Paragraph Updated!";
+Output
+
+🟦 Blue Background
+
+⚪ White Text
+
+First Paragraph Updated!
+2. Class Selector
+let second = document.querySelector(".secondPara");
+. म्हणजे class
+second.style.color = "yellow";
+second.style.backgroundColor = "green";
+second.innerText = "Second Paragraph Updated!";
+Output
+
+🟩 Green Background
+
+🟨 Yellow Text
+
+Second Paragraph Updated!
+3. Tag Selector
+let third = document.querySelectorAll("p")[2];
+
+querySelectorAll("p") सर्व <p> elements आणतो.
+
+Index
+
+0 → First Paragraph
+
+1 → Second Paragraph
+
+2 → Third Paragraph
+
+म्हणून
+
+[2]
+
+म्हणजे तिसरा paragraph.
+
+third.style.color = "red";
+third.style.backgroundColor = "black";
+third.innerText = "Third Paragraph Updated!";
+Output
+
+⬛ Black Background
+
+🔴 Red Text
+
+Third Paragraph Updated!
+अंतिम Output
+Paragraph	Background	Text Color	Text
+First	🟦 Blue	⚪ White	First Paragraph Updated!
+Second	🟩 Green	🟨 Yellow	Second Paragraph Updated!
+Third	⬛ Black	🔴 Red	Third Paragraph Updated!
+आणखी सोपी पद्धत
+
+तिसरा paragraph निवडण्यासाठी तुम्ही CSS selector वापरू शकता:
+
+let third = document.querySelector("p:last-of-type");
+
+किंवा
+
+let paragraphs = document.querySelectorAll("p");
+let third = paragraphs[2];
+
+दोन्ही योग्य आहेत.
+
+आज तुम्ही काय शिकलात?
+
+✅ querySelector("#id")
+
+✅ querySelector(".class")
+
+✅ querySelector("tag")
+
+✅ querySelectorAll("tag")
+
+✅ style
+
+✅ innerText
+
+🎯 Practice Challenge
+
+खालील HTML वापरून प्रयत्न करा:
+
+<h1 id="title">SkillOnIT Academy</h1>
+
+<p class="student">Rahul</p>
+<p class="student">Amit</p>
+<p class="student">Sneha</p>
+
+<button>Change</button>
+
+Task:
+
+<h1> चा color purple करा.
+सर्व students चा background lightblue करा.
+Button वर क्लिक केल्यावर <h1> चा text "Welcome to SkillOnIT Academy" असा बदला.
+
+यामध्ये तुम्ही querySelector(), querySelectorAll() आणि addEventListener() तिन्हीचा सराव करू शकाल. -->

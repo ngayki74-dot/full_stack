@@ -31,3 +31,156 @@
     }
 </script>
 </html>
+
+
+
+<!-- खूप छान! 👏 हा कोड 100% बरोबर आहे. विशेष म्हणजे तुम्ही event.target वापरला आहे, जो DOM Events मधील महत्त्वाचा concept आहे.
+
+Code Flow
+HTML
+<h1 id="head"></h1>
+
+<button>Click</button>
+
+<p>I am para</p>
+
+सुरुवातीला <h1> रिकामा आहे.
+
+Step 1
+let btn = document.querySelector("button");
+let para = document.querySelector("p");
+let head = document.getElementById("head");
+
+इथे तीन elements निवडले आहेत.
+
+Step 2
+btn.addEventListener("click", abc);
+
+याचा अर्थ:
+
+Button वर Click → abc() function चालेल.
+
+para.addEventListener("click", efg);
+
+याचा अर्थ:
+
+Paragraph वर Click → efg() function चालेल.
+
+Step 3
+function abc(event) {
+    let x = event.target;
+}
+
+event.target म्हणजे:
+
+ज्या element वर click झाला तो element.
+
+Button वर Click केल्यास
+
+event.target
+
+हे असे असेल:
+
+<button>Click</button>
+tagName
+x.tagName
+
+Button साठी Output
+
+BUTTON
+
+Paragraph साठी Output
+
+P
+
+टीप: tagName नेहमी UPPERCASE मध्ये येतो.
+
+Output
+Button वर Click
+Clicked by BUTTON
+Paragraph वर Click
+Clicked by P
+अजून माहिती पाहण्यासाठी
+
+जर तुम्ही असे लिहिले:
+
+console.log(event);
+
+तर Browser Event Object दाखवेल.
+
+console.log(event.target);
+
+Output
+
+<button>Click</button>
+console.log(event.target.innerText);
+
+Output
+
+Click
+console.log(event.target.tagName);
+
+Output
+
+BUTTON
+तुमचा Code आणखी छोटा करता येतो
+
+सध्या दोन functions आहेत:
+
+abc()
+
+efg()
+
+दोन्ही जवळजवळ सारखेच आहेत.
+
+एकच function वापरता येईल.
+
+function showTag(event) {
+    head.innerText = "Clicked by " + event.target.tagName;
+}
+
+btn.addEventListener("click", showTag);
+para.addEventListener("click", showTag);
+
+यामुळे code कमी होतो आणि maintain करणे सोपे जाते.
+
+event.target चे इतर उपयोग
+event.target.innerText
+Click
+event.target.style.color = "red";
+
+ज्यावर click केला त्याचा text लाल होईल.
+
+event.target.style.backgroundColor = "yellow";
+
+ज्यावर click केला त्याचा background पिवळा होईल.
+
+Event Object मधील काही Properties
+Property	उपयोग
+event.target	Click झालेला element
+event.target.tagName	Element चे नाव (BUTTON, P)
+event.target.innerText	त्या element मधील text
+event.type	Event चा प्रकार (click)
+
+उदाहरण:
+
+function showInfo(event) {
+    console.log(event.type);           // click
+    console.log(event.target.tagName); // BUTTON किंवा P
+    console.log(event.target.innerText); // Click किंवा i am para
+}
+🎯 Practice Challenge
+
+तुमच्या HTML मध्ये अजून एक element जोडा:
+
+<h2>I am Heading 2</h2>
+
+आणि त्यालाही त्याच showTag() function ला click event द्या.
+
+Expected Output:
+
+Button → Clicked by BUTTON
+Paragraph → Clicked by P
+H2 → Clicked by H2
+
+यामुळे तुम्हाला एकाच function ने अनेक elements चे events handle करण्याचा सराव होईल. -->

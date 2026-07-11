@@ -31,3 +31,88 @@ console.log(heading[heading.length-1])      //headings.length → एकूण �
                                           //length - 1 → शेवटचा index  Output:I am heading 5
 </script>
 </html>
+
+
+<!-- तुमचा कोड
+let heading = document.getElementsByClassName("heading");
+
+console.log(heading[heading.length - 1]);
+
+getElementsByClassName("heading") हे class="heading" असलेले सर्व elements शोधते.
+
+तुमच्या HTML मध्ये heading class असलेले elements:
+
+<h1 class="heading">I am heading 1</h1>                index 0 
+<h2 class="heading">I am heading 2</h2>                index 1 
+<h3 class="heading">I am heading 3</h3>                index 2 
+
+म्हणून
+
+heading.length
+
+Output:
+
+3
+
+आणि
+
+heading.length - 1
+
+Output:
+
+2
+
+म्हणून
+
+heading[2]
+
+हा <h3> element मिळेल.
+
+जर तुम्ही असे लिहिले
+console.log(heading[heading.length - 1]);
+
+Console मध्ये दिसेल:
+
+<h3 class="heading">I am heading 3</h3>
+
+जर फक्त text पाहायचा असेल तर:
+
+console.log(heading[heading.length - 1].innerText);
+
+Output:
+
+I am heading 3
+तुमच्या Comment मध्ये चूक
+
+तुम्ही लिहिले आहे:
+
+// Output: I am heading 5
+
+❌ हे चुकीचे आहे.
+
+कारण I am heading 5 ला class="heading" नाही.
+
+तो असा आहे:
+
+<h5 id="head">I am heading 5</h5>
+
+त्याला फक्त id="head" आहे.
+
+योग्य Comment
+let heading = document.getElementsByClassName("heading");
+
+console.log(heading[heading.length - 1]);
+// heading.length → class="heading" असलेल्या elements ची एकूण संख्या.
+// heading.length - 1 → शेवटचा index.
+// Output (Element): <h3 class="heading">I am heading 3</h3>
+// Output (Text): I am heading 3 (जर .innerText वापरले तर)
+लक्षात ठेवा
+Method	काय शोधते?	Return Type
+getElementById("id")	id	एक Element
+getElementsByClassName("heading")	class	HTMLCollection
+getElementsByTagName("h1")	Tag	HTMLCollection
+querySelector(".heading")	पहिला matching element	एक Element
+querySelectorAll(".heading")	सर्व matching elements	NodeList
+
+तुम्ही JavaScript DOM शिकत असाल तर पुढचा महत्त्वाचा विषय querySelector() आणि querySelectorAll() आहे.
+ ते getElementById() आणि getElementsByClassName() पेक्षा अधिक वापरले जातात. -->
